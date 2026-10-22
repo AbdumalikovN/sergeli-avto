@@ -297,7 +297,7 @@ h1, h2, h3, .num { font-family: var(--font-display); font-weight: 700; letter-sp
 }
 .hero { padding-top: calc(var(--nav-h) + 2vh + min(40vw, 250px)); padding-bottom: calc(var(--bar-h) + 48px); }
 .car { width: 100%; height: auto; overflow: visible; }
-.car .wheel { transform-box: fill-box; transform-origin: center; }
+.car .wheel { transform-box: view-box; }
 .car__beam { mix-blend-mode: screen; }
 
 .hero__content { position: relative; z-index: 1; width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 var(--pad); }
