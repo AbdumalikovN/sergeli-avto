@@ -22,6 +22,7 @@
 </head>
 <body>
   <a class="skip-link" href="#models" data-i18n="skip">Asosiy mazmunga o'tish</a>
+  <div class="sr-only" id="calcLive" aria-live="polite" aria-atomic="true"></div>
 
   <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
     <defs>
@@ -51,7 +52,7 @@
         <span class="brand__mark" aria-hidden="true">SA</span>
         <span class="brand__name">SERGELI<b>AVTO</b></span>
       </a>
-      <nav class="nav__links" aria-label="Bo'limlar">
+      <nav class="nav__links" aria-label="Bo'limlar" data-i18n-aria="nav.sections">
         <a href="#models" data-i18n="nav.models">Modellar</a>
         <a href="#calc" data-i18n="nav.calc">Kalkulyator</a>
         <a href="#bonus" data-i18n="nav.bonus">Bonuslar</a>
@@ -67,6 +68,23 @@
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
           <span>+998 77 708 99 70</span>
         </a>
+        <button class="nav__burger" type="button" id="navBurger" aria-expanded="false" aria-controls="navMenu" aria-label="Menyu" data-i18n-aria="nav.menu">
+          <span class="nav__burger-box" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__menu" id="navMenu" hidden>
+      <nav class="nav__menu-links" aria-label="Bo'limlar" data-i18n-aria="nav.sections">
+        <a href="#models" data-i18n="nav.models">Modellar</a>
+        <a href="#calc" data-i18n="nav.calc">Kalkulyator</a>
+        <a href="#bonus" data-i18n="nav.bonus">Bonuslar</a>
+        <a href="#steps" data-i18n="nav.steps">Qanday ishlaydi</a>
+        <a href="#contacts" data-i18n="nav.contacts">Kontaktlar</a>
+      </nav>
+      <div class="nav__menu-foot">
+        <a class="nav__menu-phone" href="tel:+998777089970">+998 77 708 99 70</a>
+        <a class="nav__menu-phone nav__menu-phone--sm" href="tel:+998880140771">+998 88 014 07 71</a>
+        <span class="nav__menu-hours" data-i18n="hero.hours">Har kuni 09:00–19:00</span>
       </div>
     </div>
   </header>
@@ -123,7 +141,7 @@
           <span class="line"><span data-i18n="hero.t2">2–3 soatda</span></span>
           <span class="line line--accent"><span data-i18n="hero.t3">qo'lingizda</span></span>
         </h1>
-        <p class="hero__lead" data-i18n="hero.lead">Yangi Chevrolet — banksiz, foizsiz, jarimalarsiz rassrochkada. Bitta pasport bilan, 12 viloyatga yetkazib beramiz.</p>
+        <p class="hero__lead" data-i18n="hero.lead">Yangi Chevrolet banksiz, foizsiz, jarimalarsiz rassrochkada. Bitta pasport bilan, 12 viloyatga yetkazib beramiz.</p>
         <div class="hero__cta">
           <a class="btn btn--primary" href="tel:+998777089970" data-magnetic>
             <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
@@ -139,13 +157,14 @@
           <span><b data-i18n="hero.hours">Har kuni 09:00–19:00</b> <span data-i18n="hero.where">Toshkent, Sergeli</span></span>
         </div>
       </div>
-      <a class="hero__scroll" href="#trust" aria-label="Pastga">
-        <span></span>
-      </a>
     </section>
 
     <!-- TRUST TICKER -->
-    <section class="ticker" id="trust" aria-label="Shartlar">
+    <section class="ticker" id="trust" aria-label="Shartlar" data-i18n-aria="trust.label">
+      <button class="ticker__pause" type="button" id="tickerPause" aria-pressed="false" aria-label="Harakatni to'xtatish" data-i18n-aria="trust.pause">
+        <svg class="ico ticker__ico--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+        <svg class="ico ticker__ico--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+      </button>
       <div class="ticker__track">
         <ul class="ticker__list">
           <li data-i18n="trust.1">Banksiz</li>
@@ -171,11 +190,11 @@
       <div class="container">
         <div class="section__head">
           <h2 data-i18n="models.title">Yangi Chevrolet. Bugun tanlang — bugun haydab keting.</h2>
-          <p data-i18n="models.sub">GM Uzbekistan modellari banksiz rassrochkada. Narx bosh to'lovga bog'liq — kalkulyatorda ko'ring.</p>
+          <p data-i18n="models.sub">GM Uzbekistan modellari banksiz rassrochkada. Narx bosh to'lovga bog'liq, kalkulyatorda ko'ring.</p>
         </div>
 
         <div class="garage">
-          <div class="garage__tabs" role="tablist" aria-label="Modellar">
+          <div class="garage__tabs" role="tablist" aria-label="Modellar" data-i18n-aria="nav.models">
             <button class="garage__tab is-active" role="tab" aria-selected="true" aria-controls="panel-damas" id="tab-damas" data-model="damas">Damas</button>
             <button class="garage__tab" role="tab" aria-selected="false" aria-controls="panel-cobalt" id="tab-cobalt" data-model="cobalt" tabindex="-1">Cobalt</button>
             <button class="garage__tab" role="tab" aria-selected="false" aria-controls="panel-labo" id="tab-labo" data-model="labo" tabindex="-1">Labo</button>
@@ -287,29 +306,30 @@
           <div class="calc__controls">
             <div class="field">
               <span class="field__label" data-i18n="calc.model">Model</span>
-              <div class="seg" role="radiogroup" aria-label="Model">
+              <div class="seg" role="radiogroup" aria-label="Model" data-i18n-aria="calc.model">
                 <button type="button" class="seg__btn is-active" role="radio" aria-checked="true" data-calc-model="damas">Damas</button>
                 <button type="button" class="seg__btn" role="radio" aria-checked="false" data-calc-model="cobalt">Cobalt Style MCM</button>
               </div>
             </div>
             <div class="field">
               <span class="field__label" data-i18n="calc.down">Bosh to'lov</span>
-              <div class="seg seg--down" role="radiogroup" aria-label="Bosh to'lov" id="calcDown">
+              <div class="seg seg--down" role="radiogroup" aria-label="Bosh to'lov" data-i18n-aria="calc.down" id="calcDown">
                 <button type="button" class="seg__btn is-active" role="radio" aria-checked="true" data-down="30">30%</button>
                 <button type="button" class="seg__btn" role="radio" aria-checked="false" data-down="40">40%</button>
                 <button type="button" class="seg__btn" role="radio" aria-checked="false" data-down="50">50%</button>
                 <button type="button" class="seg__btn" role="radio" aria-checked="false" data-down="60">60%</button>
               </div>
+              <p class="field__hint" id="calcHint" data-i18n="calc.onlyCobalt" hidden>Cobalt Style MCM uchun bosh to'lov 50%</p>
             </div>
             <ul class="calc__terms">
-              <li data-i18n="calc.t1">Banksiz — shartnoma to'g'ridan-to'g'ri</li>
-              <li data-i18n="calc.t2">0% — ustama yo'q</li>
+              <li data-i18n="calc.t1">Banksiz: shartnoma to'g'ridan-to'g'ri</li>
+              <li data-i18n="calc.t2">0%, ustama yo'q</li>
               <li data-i18n="calc.t3">Penya va jarimalar yo'q</li>
               <li data-i18n="calc.t4">Bitta pasport kifoya</li>
             </ul>
           </div>
 
-          <div class="calc__result" aria-live="polite">
+          <div class="calc__result">
             <div class="calc__model"><span id="calcModelName">Chevrolet Damas</span> <span class="calc__bonus" id="calcBonus" data-i18n="calc.bonus5">5 ta bonus bilan</span></div>
             <div class="calc__grid">
               <div class="calc__cell">
@@ -400,7 +420,7 @@
           <li class="step">
             <span class="step__n">4</span>
             <h3 data-i18n="steps.4.t">2–3 soatda kalit</h3>
-            <p data-i18n="steps.4.d">Toshkentda yoki 12 viloyatning istalganida — yetkazib beramiz.</p>
+            <p data-i18n="steps.4.d">Toshkentda yoki 12 viloyatning istalganida yetkazib beramiz.</p>
           </li>
         </ol>
       </div>
@@ -485,34 +505,36 @@
           <form class="lead__form" id="leadForm" novalidate>
             <h3 data-i18n="lead.title">Ariza qoldiring</h3>
             <p class="lead__sub" data-i18n="lead.sub">Ish vaqtida qo'ng'iroq qilamiz va shartlarni tushuntiramiz.</p>
-            <label class="input">
-              <span data-i18n="lead.name">Ismingiz</span>
-              <input type="text" name="name" autocomplete="name" required minlength="2" data-i18n-ph="lead.name.ph" placeholder="Bunyod">
-            </label>
-            <label class="input">
-              <span data-i18n="lead.phone">Telefon</span>
-              <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required pattern="^\+?[0-9\s\-\(\)]{9,}$" placeholder="+998 __ ___ __ __">
-            </label>
+            <div class="input">
+              <label for="leadName" data-i18n="lead.name">Ismingiz</label>
+              <input type="text" id="leadName" name="name" autocomplete="name" autocapitalize="words" required minlength="2" aria-describedby="leadNameErr" data-i18n-ph="lead.name.ph" placeholder="Masalan, Bunyod">
+              <p class="input__err" id="leadNameErr" hidden data-i18n="lead.err.name">Ismingizni kiriting (kamida 2 ta harf).</p>
+            </div>
+            <div class="input">
+              <label for="leadPhone" data-i18n="lead.phone">Telefon</label>
+              <input type="tel" id="leadPhone" name="phone" autocomplete="tel" inputmode="tel" required pattern="^\+?[0-9\s\-\(\)]{9,}$" aria-describedby="leadPhoneErr" placeholder="+998 __ ___ __ __">
+              <p class="input__err" id="leadPhoneErr" hidden data-i18n="lead.err.phone">Telefon raqamini +998 bilan to'liq kiriting.</p>
+            </div>
             <div class="lead__row">
-              <label class="input">
-                <span data-i18n="lead.model">Model</span>
+              <div class="input">
+                <label for="leadModel" data-i18n="lead.model">Model</label>
                 <select name="model" id="leadModel">
                   <option value="Damas">Damas</option>
                   <option value="Cobalt">Cobalt</option>
                   <option value="Labo">Labo</option>
                 </select>
-              </label>
-              <label class="input">
-                <span data-i18n="lead.down">Bosh to'lov</span>
+              </div>
+              <div class="input">
+                <label for="leadDown" data-i18n="lead.down">Bosh to'lov</label>
                 <select name="down" id="leadDown">
                   <option value="30">30%</option>
                   <option value="40">40%</option>
                   <option value="50">50%</option>
                   <option value="60">60%</option>
                 </select>
-              </label>
+              </div>
             </div>
-            <p class="lead__error" id="leadError" role="alert" hidden data-i18n="lead.error">Ism va telefon raqamini to'g'ri kiriting.</p>
+            <p class="lead__error" id="leadError" role="alert" tabindex="-1" hidden data-i18n="lead.error">Ism va telefon raqamini to'g'ri kiriting.</p>
             <button class="btn btn--primary btn--block" type="submit" data-i18n="lead.submit">Yuborish</button>
             <p class="lead__fine" data-i18n="lead.fine">Ma'lumotlar faqat Sergeli Avto bilan bog'lanish uchun ishlatiladi.</p>
           </form>
@@ -544,7 +566,7 @@
     </div>
   </footer>
 
-  <div class="mobile-bar" aria-label="Tezkor aloqa">
+  <div class="mobile-bar" role="group" aria-label="Tezkor aloqa" data-i18n-aria="bar.label">
     <a class="btn btn--primary" href="tel:+998777089970"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="cta.callShort">Qo'ng'iroq</span></a>
     <a class="btn btn--light" href="https://ig.me/m/sergeli_auto" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a>
   </div>
