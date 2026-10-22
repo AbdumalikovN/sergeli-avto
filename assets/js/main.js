@@ -445,7 +445,7 @@
 
   // Wheels spin everywhere
   $$("[data-wheel]").forEach(function (w) {
-    gsap.to(w, { rotation: 360, duration: 0.9, ease: "none", repeat: -1, transformOrigin: "50% 50%" });
+    gsap.to(w, { rotation: 360, duration: 0.9, ease: "none", repeat: -1, svgOrigin: "0 0" });
   });
 
   // Hero: one orchestrated entrance
