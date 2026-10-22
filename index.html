@@ -1,90 +1,111 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" class="boot">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Sergeli Avto — Chevrolet avtomobillari banksiz, 0% rassrochkada | Toshkent, Sergeli</title>
-  <meta name="description" content="Sergeli Avto — Toshkentdagi avtomobil sotish va sotib olish xizmati. Damas, Cobalt, Labo banksiz, foizsiz, jarimalarsiz rassrochkada. 1 pasport bilan, 12 viloyatga yetkazib beramiz. 2–3 soat ichida kalit sizda.">
-  <meta name="theme-color" content="#15171B">
+  <title>Sergeli Avto — Chevrolet Damas, Cobalt, Labo banksiz 0% rassrochkada | Toshkent, Sergeli</title>
+  <meta name="description" content="Sergeli Avto — Toshkentdagi avtomobil sotish va sotib olish xizmati. Damas, Cobalt, Labo banksiz, foizsiz, jarimalarsiz rassrochkada. 1 pasport bilan, 12 viloyatga. 2–3 soat ichida kalit sizda.">
+  <meta name="theme-color" content="#f2f3f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#08090b" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Sergeli Avto — avtomobil 2–3 soatda, banksiz 0% rassrochka">
   <meta property="og:description" content="Damas, Cobalt, Labo. Banksiz · Foizsiz · Jarimalarsiz · 1 pasport · 12 viloyat. Toshkent, Sergeli (Index). Har kuni 09:00–19:00.">
   <meta property="og:site_name" content="Sergeli Avto">
   <meta property="og:locale" content="uz_UZ">
   <meta property="og:locale:alternate" content="ru_RU">
-  <meta property="og:image" content="assets/svg/og-cover.svg">
+  <meta property="og:image" content="assets/img/hero-night.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/svg/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-night.webp" type="image/webp">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <script>
+    /* Pre-paint: theme + language + boot gate (no flash, no dependencies) */
+    (function () {
+      var d = document.documentElement, t = null, l = null;
+      try { t = localStorage.getItem("sa_theme"); l = localStorage.getItem("sa_lang"); } catch (e) {}
+      if (t === "dark" || t === "light") d.setAttribute("data-theme", t);
+      if (l === "ru") d.setAttribute("lang", "ru");
+      var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches, seen = false;
+      try { seen = sessionStorage.getItem("sa_boot") === "1"; } catch (e) {}
+      if (rm || seen) d.classList.remove("boot");
+    })();
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"AutoDealer","name":"Sergeli Avto","telephone":["+998777089970","+998880140771"],"address":{"@type":"PostalAddress","addressLocality":"Toshkent","addressRegion":"Sergeli tumani","streetAddress":"Index"},"openingHours":"Mo-Su 09:00-19:00","sameAs":["https://instagram.com/sergeli_auto"],"brand":"Chevrolet"}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#models" data-i18n="skip">Asosiy mazmunga o'tish</a>
   <div class="sr-only" id="calcLive" aria-live="polite" aria-atomic="true"></div>
 
-  <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
-    <defs>
-      <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#FF3B4E"/>
-        <stop offset="0.55" stop-color="#E3112A"/>
-        <stop offset="1" stop-color="#8E0A1B"/>
-      </linearGradient>
-      <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#3A3F48"/>
-        <stop offset="1" stop-color="#15171B"/>
-      </linearGradient>
-      <radialGradient id="beam" cx="0" cy="0.5" r="1">
-        <stop offset="0" stop-color="#FFF7E0" stop-opacity="0.9"/>
-        <stop offset="1" stop-color="#FFF7E0" stop-opacity="0"/>
-      </radialGradient>
-      <radialGradient id="shadowGrad" cx="0.5" cy="0.5" r="0.5">
-        <stop offset="0" stop-color="#000" stop-opacity="0.7"/>
-        <stop offset="1" stop-color="#000" stop-opacity="0"/>
-      </radialGradient>
-    </defs>
-  </svg>
+  <!-- Boot screen (w2w-style loader; auto-dismiss, once per session, skipped for reduced motion) -->
+  <div class="boot-screen" id="boot" aria-hidden="true">
+    <div class="boot-glow"></div>
+    <div class="boot-scan"></div>
+    <div class="boot-hud">
+      <div class="boot-brand">
+        <svg class="boot-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30c2-7 6-12 12-14h10c6 2 9 7 10 14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M4 31h40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="15" cy="35" r="3.5" fill="currentColor"/><circle cx="33" cy="35" r="3.5" fill="currentColor"/></svg>
+        <span class="boot-name">SERGELI<b>AVTO</b></span>
+      </div>
+      <div class="boot-line"><i id="bootBar"></i></div>
+      <p class="boot-msg" id="bootMsg">Chevrolet · 0% · banksiz</p>
+    </div>
+  </div>
 
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a class="brand" href="#top" aria-label="Sergeli Avto">
-        <span class="brand__mark" aria-hidden="true">SA</span>
-        <span class="brand__name">SERGELI<b>AVTO</b></span>
+  <!-- Ambient drifting light (fixed, behind everything) -->
+  <div class="ambient" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <!-- Floating liquid-glass header -->
+  <header class="hd" id="hd">
+    <div class="hd-bar">
+      <a class="brand" href="#top" aria-label="Sergeli Avto — boshiga">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><path d="M8 30c2-7 6-12 12-14h10c6 2 9 7 10 14" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M4 31h40" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><circle cx="15" cy="35" r="3.5" fill="currentColor"/><circle cx="33" cy="35" r="3.5" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-name">SERGELI<b>AVTO</b></span>
       </a>
-      <nav class="nav__links" aria-label="Bo'limlar" data-i18n-aria="nav.sections">
-        <a href="#models" data-i18n="nav.models">Modellar</a>
-        <a href="#calc" data-i18n="nav.calc">Kalkulyator</a>
-        <a href="#bonus" data-i18n="nav.bonus">Bonuslar</a>
-        <a href="#steps" data-i18n="nav.steps">Qanday ishlaydi</a>
-        <a href="#contacts" data-i18n="nav.contacts">Kontaktlar</a>
+      <nav class="hd-nav" aria-label="Bo'limlar" data-i18n-aria="nav.sections">
+        <a class="hd-link" href="#models" data-i18n="nav.models">Modellar</a>
+        <a class="hd-link" href="#calc" data-i18n="nav.calc">Kalkulyator</a>
+        <a class="hd-link" href="#bonus" data-i18n="nav.bonus">Bonuslar</a>
+        <a class="hd-link" href="#about" data-i18n="nav.about">Salon</a>
+        <a class="hd-link" href="#visit" data-i18n="nav.visit">Tashrif</a>
       </nav>
-      <div class="nav__actions">
-        <div class="lang" role="group" aria-label="Til / Язык">
-          <button type="button" class="lang__btn is-active" data-lang="uz" aria-pressed="true">UZ</button>
-          <button type="button" class="lang__btn" data-lang="ru" aria-pressed="false">RU</button>
+      <div class="hd-tools">
+        <div class="seg seg--lang" role="group" aria-label="Til / Язык">
+          <span class="seg-thumb" aria-hidden="true"></span>
+          <button type="button" class="seg-btn is-active" data-lang="uz" aria-pressed="true">UZ</button>
+          <button type="button" class="seg-btn" data-lang="ru" aria-pressed="false">RU</button>
         </div>
-        <a class="btn btn--ghost nav__call" href="tel:+998777089970" data-magnetic>
+        <button class="hd-tool" type="button" id="themeBtn" aria-label="Tungi rejim" data-i18n-aria="theme.dark">
+          <svg class="ico ico-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="ico ico-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        </button>
+        <a class="btn btn-brand btn-sm hd-call" href="tel:+998777089970" data-magnetic>
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
           <span>+998 77 708 99 70</span>
         </a>
-        <button class="nav__burger" type="button" id="navBurger" aria-expanded="false" aria-controls="navMenu" aria-label="Menyu" data-i18n-aria="nav.menu">
-          <span class="nav__burger-box" aria-hidden="true"><i></i><i></i><i></i></span>
+        <button class="hd-tool hd-burger" type="button" id="navBurger" aria-expanded="false" aria-controls="navMenu" aria-label="Menyu" data-i18n-aria="nav.menu">
+          <span class="burger-box" aria-hidden="true"><i></i><i></i></span>
         </button>
       </div>
     </div>
-    <div class="nav__menu" id="navMenu" hidden>
-      <nav class="nav__menu-links" aria-label="Bo'limlar" data-i18n-aria="nav.sections">
+    <div class="hd-menu" id="navMenu" hidden>
+      <nav class="hd-menu-links" aria-label="Bo'limlar" data-i18n-aria="nav.sections">
         <a href="#models" data-i18n="nav.models">Modellar</a>
         <a href="#calc" data-i18n="nav.calc">Kalkulyator</a>
         <a href="#bonus" data-i18n="nav.bonus">Bonuslar</a>
-        <a href="#steps" data-i18n="nav.steps">Qanday ishlaydi</a>
-        <a href="#contacts" data-i18n="nav.contacts">Kontaktlar</a>
+        <a href="#about" data-i18n="nav.about">Salon</a>
+        <a href="#visit" data-i18n="nav.visit">Tashrif</a>
       </nav>
-      <div class="nav__menu-foot">
-        <a class="nav__menu-phone" href="tel:+998777089970">+998 77 708 99 70</a>
-        <a class="nav__menu-phone nav__menu-phone--sm" href="tel:+998880140771">+998 88 014 07 71</a>
-        <span class="nav__menu-hours" data-i18n="hero.hours">Har kuni 09:00–19:00</span>
+      <div class="hd-menu-foot">
+        <a class="hd-menu-phone" href="tel:+998777089970">+998 77 708 99 70</a>
+        <a class="hd-menu-phone" href="tel:+998880140771">+998 88 014 07 71</a>
+        <span class="hd-menu-hours"><i class="dot-live" id="openDotMenu"></i><span data-i18n="hours">Har kuni 09:00–19:00</span></span>
       </div>
     </div>
   </header>
@@ -92,439 +113,423 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero" id="hero">
-      <div class="hero__scene" aria-hidden="true">
-        <div class="hero__glow"></div>
-        <div class="road">
-          <div class="road__plane">
-            <div class="road__lines"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            <span class="hl"><span data-i18n="hero.t1">Yangi Chevrolet</span></span>
+            <span class="hl"><span class="grad-text" data-i18n="hero.t2">2–3 soatda</span></span>
+            <span class="hl"><span data-i18n="hero.t3">qo'lingizda</span></span>
+          </h1>
+          <p class="hero-lead lead" data-i18n="hero.lead">Damas, Cobalt va Labo — banksiz, foizsiz va jarimalarsiz rassrochkada. Bitta pasport kifoya. 12 viloyatga yetkazib beramiz.</p>
+          <div class="hero-cta">
+            <a class="btn btn-brand btn-lg" href="#calc" data-magnetic>
+              <span data-i18n="hero.cta1">Oylik to'lovni hisoblash</span>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-glass btn-lg" href="#visit" data-magnetic>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+              <span data-i18n="hero.cta2">Tashrifga yozilish</span>
+            </a>
           </div>
+          <ul class="hero-proof" aria-label="Asosiy shartlar" data-i18n-aria="proof.label">
+            <li><b>0%</b><span data-i18n="proof.rate">foiz va ustama</span></li>
+            <li><b data-count="12">12</b><span data-i18n="proof.regions">viloyatga yetkazamiz</span></li>
+            <li><b data-count="111" data-suffix="K">111K</b><span data-i18n="proof.ig">obunachi Instagram'da</span></li>
+            <li><b>1</b><span data-i18n="proof.docs">pasport — boshqa hujjat yo'q</span></li>
+          </ul>
         </div>
-        <div class="streaks" data-depth="0.6">
-          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        </div>
-        <div class="hero__car" data-depth="1">
-          <svg class="car car--hero" viewBox="0 0 640 260" preserveAspectRatio="xMidYMid meet" aria-hidden="true" overflow="visible">
-            <ellipse class="car__shadow" cx="320" cy="222" rx="300" ry="16" fill="url(#shadowGrad)"/>
-            <path class="car__beam" d="M608 128 L1100 60 L1100 250 L608 150 Z" fill="url(#beam)" opacity="0.35"/>
-            <g class="car__body">
-              <path fill="url(#bodyGrad)" d="M30 165 L30 135 Q32 118 48 114 L150 108 L215 72 Q225 62 245 60 L390 58 Q410 58 425 70 L480 108 L580 118 Q608 122 612 142 L612 165 Q612 176 600 178 L548 178 A44 44 0 0 1 432 178 L208 178 A44 44 0 0 1 92 178 L42 178 Q30 176 30 165 Z"/>
-              <path fill="url(#glassGrad)" d="M160 108 L218 76 L240 70 L300 68 L300 108 Z"/>
-              <path fill="url(#glassGrad)" d="M312 68 L390 66 L410 70 L470 108 L312 108 Z"/>
-              <path class="car__line" d="M60 136 L600 146" stroke="#FFB3BA" stroke-opacity="0.35" stroke-width="2" fill="none"/>
-              <path class="car__lamp car__lamp--rear" d="M30 128 L48 126 L48 140 L30 142 Z" fill="#FF6F7D"/>
-              <path class="car__lamp car__lamp--front" d="M580 124 L610 130 L612 146 L584 142 Z" fill="#FFF3D6"/>
-              <rect x="486" y="112" width="4" height="4" fill="#15171B" opacity="0.4"/>
-            </g>
-            <g transform="translate(150 178)"><g class="wheel" data-wheel>
-              <circle r="42" fill="#0B0C0E"/>
-              <circle r="25" fill="none" stroke="#9AA0AA" stroke-width="5"/>
-              <g stroke="#9AA0AA" stroke-width="5" stroke-linecap="round">
-                <path d="M0 -22 V22"/><path d="M-22 0 H22"/><path d="M-15.5 -15.5 L15.5 15.5"/><path d="M-15.5 15.5 L15.5 -15.5"/>
-              </g>
-              <circle r="6" fill="#E3112A"/>
-            </g></g>
-            <g transform="translate(490 178)"><g class="wheel" data-wheel>
-              <circle r="42" fill="#0B0C0E"/>
-              <circle r="25" fill="none" stroke="#9AA0AA" stroke-width="5"/>
-              <g stroke="#9AA0AA" stroke-width="5" stroke-linecap="round">
-                <path d="M0 -22 V22"/><path d="M-22 0 H22"/><path d="M-15.5 -15.5 L15.5 15.5"/><path d="M-15.5 15.5 L15.5 -15.5"/>
-              </g>
-              <circle r="6" fill="#E3112A"/>
-            </g></g>
-          </svg>
-        </div>
-      </div>
 
-      <div class="hero__content">
-        <h1 class="hero__title">
-          <span class="line"><span data-i18n="hero.t1">Avtomobil</span></span>
-          <span class="line"><span data-i18n="hero.t2">2–3 soatda</span></span>
-          <span class="line line--accent"><span data-i18n="hero.t3">qo'lingizda</span></span>
-        </h1>
-        <p class="hero__lead" data-i18n="hero.lead">Yangi Chevrolet banksiz, foizsiz, jarimalarsiz rassrochkada. Bitta pasport bilan, 12 viloyatga yetkazib beramiz.</p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="tel:+998777089970" data-magnetic>
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
-            <span data-i18n="cta.call">Qo'ng'iroq qilish</span>
+        <div class="hero-visual" aria-hidden="false">
+          <figure class="glass hero-photo" data-tilt>
+            <picture>
+              <source srcset="assets/img/hero-night.webp" type="image/webp">
+              <img src="assets/img/hero-night.jpg" width="668" height="730" alt="Sergeli Avto salonining tungi fasadi: SERGELI AUTO yozuvi, oldida oq va qora Cobalt" fetchpriority="high" decoding="async" data-i18n-alt="hero.alt">
+            </picture>
+            <figcaption class="hero-cap">
+              <span class="chip chip-live"><i class="dot-live" id="openDotHero"></i><span id="openText" data-i18n="open.now">Hozir ochiq</span></span>
+              <span class="hero-cap-addr" data-i18n="addr.short">Sergeli, Index</span>
+            </figcaption>
+          </figure>
+          <div class="orb" aria-hidden="true">
+            <span class="orb-rim"></span>
+            <span class="orb-core"><b>0<small>%</small></b><span data-i18n="orb.sub">rassrochka</span></span>
+          </div>
+          <a class="glass hero-badge" href="#models">
+            <span class="hero-badge-k" data-i18n="badge.from">Damas oyiga</span>
+            <span class="hero-badge-v">1 293 000 <small data-i18n="sum">so'm</small></span>
+            <span class="hero-badge-s" data-i18n="badge.note">60% bosh to'lov · 30 oy</span>
           </a>
-          <a class="btn btn--light" href="https://ig.me/m/sergeli_auto" target="_blank" rel="noopener" data-magnetic>
-            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-            <span data-i18n="cta.ig">Instagram'da yozish</span>
-          </a>
-        </div>
-        <div class="hero__meta">
-          <span><b data-count="111" data-suffix="K">111K</b> <span data-i18n="hero.followers">obunachi Instagram'da</span></span>
-          <span><b data-i18n="hero.hours">Har kuni 09:00–19:00</b> <span data-i18n="hero.where">Toshkent, Sergeli</span></span>
         </div>
       </div>
     </section>
 
-    <!-- TRUST TICKER -->
-    <section class="ticker" id="trust" aria-label="Shartlar" data-i18n-aria="trust.label">
-      <button class="ticker__pause" type="button" id="tickerPause" aria-pressed="false" aria-label="Harakatni to'xtatish" data-i18n-aria="trust.pause">
-        <svg class="ico ticker__ico--pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
-        <svg class="ico ticker__ico--play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
+    <!-- MARQUEE -->
+    <section class="marq" id="trust" aria-label="Shartlar" data-i18n-aria="trust.label">
+      <button class="marq-pause" type="button" id="marqPause" aria-pressed="false" aria-label="Harakatni to'xtatish" data-i18n-aria="trust.pause">
+        <svg class="ico i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg>
+        <svg class="ico i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>
       </button>
-      <div class="ticker__track">
-        <ul class="ticker__list">
-          <li data-i18n="trust.1">Banksiz</li>
-          <li data-i18n="trust.2">Foizsiz — 0%</li>
-          <li data-i18n="trust.3">Penya va jarimalarsiz</li>
-          <li data-i18n="trust.4">1 pasport bilan</li>
-          <li data-i18n="trust.5">12 viloyatga yetkazib beramiz</li>
-          <li data-i18n="trust.6">2–3 soatda kalit sizda</li>
+      <div class="marq-track">
+        <ul class="marq-list">
+          <li data-i18n="trust.1">Banksiz</li><li data-i18n="trust.2">Foizsiz — 0%</li><li data-i18n="trust.3">Penya va jarimalarsiz</li><li data-i18n="trust.4">1 ta pasport evaziga</li><li data-i18n="trust.5">12 viloyatga yetkazib beramiz</li><li data-i18n="trust.6">2–3 soat ichida</li><li data-i18n="trust.7">Tez va arzon narxlarda</li>
         </ul>
-        <ul class="ticker__list" aria-hidden="true">
-          <li data-i18n="trust.1">Banksiz</li>
-          <li data-i18n="trust.2">Foizsiz — 0%</li>
-          <li data-i18n="trust.3">Penya va jarimalarsiz</li>
-          <li data-i18n="trust.4">1 pasport bilan</li>
-          <li data-i18n="trust.5">12 viloyatga yetkazib beramiz</li>
-          <li data-i18n="trust.6">2–3 soatda kalit sizda</li>
+        <ul class="marq-list" aria-hidden="true">
+          <li data-i18n="trust.1">Banksiz</li><li data-i18n="trust.2">Foizsiz — 0%</li><li data-i18n="trust.3">Penya va jarimalarsiz</li><li data-i18n="trust.4">1 ta pasport evaziga</li><li data-i18n="trust.5">12 viloyatga yetkazib beramiz</li><li data-i18n="trust.6">2–3 soat ichida</li><li data-i18n="trust.7">Tez va arzon narxlarda</li>
         </ul>
       </div>
     </section>
 
     <!-- MODELS -->
-    <section class="section models" id="models">
-      <div class="container">
-        <div class="section__head">
-          <h2 data-i18n="models.title">Yangi Chevrolet. Bugun tanlang — bugun haydab keting.</h2>
-          <p data-i18n="models.sub">GM Uzbekistan modellari banksiz rassrochkada. Narx bosh to'lovga bog'liq, kalkulyatorda ko'ring.</p>
+    <section class="section" id="models">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2 class="h2" data-i18n="models.title">Uchta model. Bitta shart: banksiz va 0%.</h2>
+          <p class="lead" data-i18n="models.sub">Narxlar — Sergeli Avto e'lon qilgan rassrochka shartlari. Bosh to'lovni tanlang, oylik to'lov kalkulyatorda darhol ko'rinadi.</p>
         </div>
 
-        <div class="garage">
-          <div class="garage__tabs" role="tablist" aria-label="Modellar" data-i18n-aria="nav.models">
-            <button class="garage__tab is-active" role="tab" aria-selected="true" aria-controls="panel-damas" id="tab-damas" data-model="damas">Damas</button>
-            <button class="garage__tab" role="tab" aria-selected="false" aria-controls="panel-cobalt" id="tab-cobalt" data-model="cobalt" tabindex="-1">Cobalt</button>
-            <button class="garage__tab" role="tab" aria-selected="false" aria-controls="panel-labo" id="tab-labo" data-model="labo" tabindex="-1">Labo</button>
-          </div>
+        <div class="models-grid">
+          <!-- Damas -->
+          <article class="glass card model" data-reveal>
+            <div class="model-media model-media--draw" aria-hidden="true">
+              <svg viewBox="0 0 640 260" class="car-draw"><path d="M30 170 L30 72 Q30 52 50 52 L420 50 Q456 50 480 74 L560 128 Q600 136 612 150 L614 170 Q614 180 602 180 L540 180 A40 40 0 0 1 460 180 L190 180 A40 40 0 0 1 110 180 L42 180 Q30 180 30 170 Z"/><path d="M62 64h138v54H62zM216 64h146v54H216zM380 64l50-2 106 66H380z"/><circle cx="150" cy="180" r="38"/><circle cx="500" cy="180" r="38"/><circle cx="150" cy="180" r="14"/><circle cx="500" cy="180" r="14"/></svg>
+            </div>
+            <div class="model-body">
+              <h3 class="model-name">Chevrolet Damas</h3>
+              <p class="model-tag" data-i18n="models.damas.tag">Rassrochka 30 oyga · 5 ta bonus</p>
+              <dl class="model-facts">
+                <div><dt data-i18n="f.monthly">Oylik to'lov</dt><dd><span data-i18n="from">dan</span> <b>1 293 000</b> <small data-i18n="sum">so'm</small></dd></div>
+                <div><dt data-i18n="f.down">Bosh to'lov</dt><dd>30–60%</dd></div>
+                <div><dt data-i18n="f.term">Muddat</dt><dd>30 <span data-i18n="months">oy</span></dd></div>
+              </dl>
+              <div class="model-actions">
+                <button class="btn btn-brand" type="button" data-calc="damas" data-i18n="models.calc">Hisoblash</button>
+                <a class="btn btn-ghost" href="#visit" data-lead="damas" data-i18n="models.ask">Ariza</a>
+              </div>
+            </div>
+          </article>
 
-          <div class="garage__stage">
-            <div class="garage__floor" aria-hidden="true"></div>
-            <div class="garage__car garage__car--damas is-active" data-model="damas">
-              <svg class="car" viewBox="0 0 640 260" aria-label="Chevrolet Damas">
-                <ellipse cx="320" cy="222" rx="300" ry="16" fill="url(#shadowGrad)"/>
-                <path fill="url(#bodyGrad)" d="M30 170 L30 72 Q30 52 50 52 L420 50 Q456 50 480 74 L560 128 Q600 136 612 150 L614 170 Q614 180 602 180 L540 180 A40 40 0 0 1 460 180 L190 180 A40 40 0 0 1 110 180 L42 180 Q30 180 30 170 Z"/>
-                <path fill="url(#glassGrad)" d="M62 64 L200 64 L200 118 L62 118 Z"/>
-                <path fill="url(#glassGrad)" d="M216 64 L362 64 L362 118 L216 118 Z"/>
-                <path fill="url(#glassGrad)" d="M380 64 L430 62 L536 128 L380 128 Z"/>
-                <path d="M62 136 L600 146" stroke="#FFB3BA" stroke-opacity="0.35" stroke-width="2" fill="none"/>
-                <path d="M30 124 L46 124 L46 144 L30 144 Z" fill="#FF6F7D"/>
-                <path d="M584 132 L612 142 L613 156 L586 150 Z" fill="#FFF3D6"/>
-                <g transform="translate(150 180)"><g class="wheel" data-wheel><circle r="38" fill="#0B0C0E"/><circle r="22" fill="none" stroke="#9AA0AA" stroke-width="5"/><g stroke="#9AA0AA" stroke-width="5" stroke-linecap="round"><path d="M0 -19 V19"/><path d="M-19 0 H19"/><path d="M-13.5 -13.5 L13.5 13.5"/><path d="M-13.5 13.5 L13.5 -13.5"/></g><circle r="6" fill="#E3112A"/></g></g>
-                <g transform="translate(500 180)"><g class="wheel" data-wheel><circle r="38" fill="#0B0C0E"/><circle r="22" fill="none" stroke="#9AA0AA" stroke-width="5"/><g stroke="#9AA0AA" stroke-width="5" stroke-linecap="round"><path d="M0 -19 V19"/><path d="M-19 0 H19"/><path d="M-13.5 -13.5 L13.5 13.5"/><path d="M-13.5 13.5 L13.5 -13.5"/></g><circle r="6" fill="#E3112A"/></g></g>
-              </svg>
+          <!-- Cobalt with Style / Midnight switch -->
+          <article class="glass card model model--cobalt" data-reveal>
+            <div class="model-media model-media--photo">
+              <picture class="model-img is-active" data-trim="style">
+                <source srcset="assets/img/cobalt-white.webp" type="image/webp">
+                <img src="assets/img/cobalt-white.jpg" width="446" height="206" alt="Chevrolet Cobalt Style MCM, oq rang" loading="lazy" decoding="async" data-i18n-alt="alt.cobaltStyle">
+              </picture>
+              <picture class="model-img" data-trim="midnight">
+                <source srcset="assets/img/cobalt-black.webp" type="image/webp">
+                <img src="assets/img/cobalt-black.jpg" width="432" height="198" alt="Chevrolet Cobalt Midnight MCM, qora rang" loading="lazy" decoding="async" data-i18n-alt="alt.cobaltMidnight">
+              </picture>
             </div>
-            <div class="garage__car garage__car--cobalt" data-model="cobalt">
-              <svg class="car" viewBox="0 0 640 260" aria-label="Chevrolet Cobalt">
-                <ellipse cx="320" cy="222" rx="300" ry="16" fill="url(#shadowGrad)"/>
-                <path fill="url(#bodyGrad)" d="M30 165 L30 135 Q32 118 48 114 L150 108 L215 72 Q225 62 245 60 L390 58 Q410 58 425 70 L480 108 L580 118 Q608 122 612 142 L612 165 Q612 176 600 178 L548 178 A44 44 0 0 1 432 178 L208 178 A44 44 0 0 1 92 178 L42 178 Q30 176 30 165 Z"/>
-                <path fill="url(#glassGrad)" d="M160 108 L218 76 L240 70 L300 68 L300 108 Z"/>
-                <path fill="url(#glassGrad)" d="M312 68 L390 66 L410 70 L470 108 L312 108 Z"/>
-                <path d="M60 136 L600 146" stroke="#FFB3BA" stroke-opacity="0.35" stroke-width="2" fill="none"/>
-                <path d="M30 128 L48 126 L48 140 L30 142 Z" fill="#FF6F7D"/>
-                <path d="M580 124 L610 130 L612 146 L584 142 Z" fill="#FFF3D6"/>
-                <g transform="translate(150 178)"><g class="wheel" data-wheel><circle r="42" fill="#0B0C0E"/><circle r="25" fill="none" stroke="#9AA0AA" stroke-width="5"/><g stroke="#9AA0AA" stroke-width="5" stroke-linecap="round"><path d="M0 -22 V22"/><path d="M-22 0 H22"/><path d="M-15.5 -15.5 L15.5 15.5"/><path d="M-15.5 15.5 L15.5 -15.5"/></g><circle r="6" fill="#E3112A"/></g></g>
-                <g transform="translate(490 178)"><g class="wheel" data-wheel><circle r="42" fill="#0B0C0E"/><circle r="25" fill="none" stroke="#9AA0AA" stroke-width="5"/><g stroke="#9AA0AA" stroke-width="5" stroke-linecap="round"><path d="M0 -22 V22"/><path d="M-22 0 H22"/><path d="M-15.5 -15.5 L15.5 15.5"/><path d="M-15.5 15.5 L15.5 -15.5"/></g><circle r="6" fill="#E3112A"/></g></g>
-              </svg>
+            <div class="model-body">
+              <div class="model-head">
+                <h3 class="model-name">Chevrolet Cobalt</h3>
+                <div class="seg seg--trim" role="radiogroup" aria-label="Komplektatsiya" data-i18n-aria="trim.label" id="trimSeg">
+                  <span class="seg-thumb" aria-hidden="true"></span>
+                  <button type="button" class="seg-btn is-active" role="radio" aria-checked="true" data-trim="style">Style</button>
+                  <button type="button" class="seg-btn" role="radio" aria-checked="false" data-trim="midnight">Midnight</button>
+                </div>
+              </div>
+              <p class="model-tag" data-i18n="models.cobalt.tag">MCM · Rassrochka 24 oyga · 10 ta bonus</p>
+              <dl class="model-facts">
+                <div><dt data-i18n="f.monthly">Oylik to'lov</dt><dd><b id="cobaltMonthly">3 252 000</b> <small data-i18n="sum">so'm</small></dd></div>
+                <div><dt data-i18n="f.down">Bosh to'lov</dt><dd>50% · <span id="cobaltDown">82 500 000</span></dd></div>
+                <div><dt data-i18n="f.term">Muddat</dt><dd>24 <span data-i18n="months">oy</span></dd></div>
+              </dl>
+              <div class="model-actions">
+                <button class="btn btn-brand" type="button" data-calc="cobaltStyle" id="cobaltCalcBtn" data-i18n="models.calc">Hisoblash</button>
+                <a class="btn btn-ghost" href="#visit" data-lead="cobaltStyle" id="cobaltLeadBtn" data-i18n="models.ask">Ariza</a>
+              </div>
             </div>
-            <div class="garage__car garage__car--labo" data-model="labo">
-              <svg class="car" viewBox="0 0 640 260" aria-label="Chevrolet Labo">
-                <ellipse cx="320" cy="222" rx="300" ry="16" fill="url(#shadowGrad)"/>
-                <path fill="url(#bodyGrad)" d="M30 170 L30 112 L372 112 L372 62 Q374 50 392 50 L450 48 Q482 48 502 74 L560 128 Q600 136 612 150 L614 170 Q614 180 602 180 L540 180 A40 40 0 0 1 460 180 L190 180 A40 40 0 0 1 110 180 L42 180 Q30 180 30 170 Z"/>
-                <path d="M44 124 L360 124 M44 140 L360 140" stroke="#15171B" stroke-opacity="0.45" stroke-width="3" fill="none"/>
-                <path fill="url(#glassGrad)" d="M386 62 L446 60 L446 118 L386 118 Z"/>
-                <path fill="url(#glassGrad)" d="M462 60 L494 60 L548 128 L462 128 Z"/>
-                <path d="M384 136 L600 146" stroke="#FFB3BA" stroke-opacity="0.35" stroke-width="2" fill="none"/>
-                <path d="M30 146 L46 146 L46 164 L30 164 Z" fill="#FF6F7D"/>
-                <path d="M584 132 L612 142 L613 156 L586 150 Z" fill="#FFF3D6"/>
-                <g transform="translate(150 180)"><g class="wheel" data-wheel><circle r="38" fill="#0B0C0E"/><circle r="22" fill="none" stroke="#9AA0AA" stroke-width="5"/><g stroke="#9AA0AA" stroke-width="5" stroke-linecap="round"><path d="M0 -19 V19"/><path d="M-19 0 H19"/><path d="M-13.5 -13.5 L13.5 13.5"/><path d="M-13.5 13.5 L13.5 -13.5"/></g><circle r="6" fill="#E3112A"/></g></g>
-                <g transform="translate(500 180)"><g class="wheel" data-wheel><circle r="38" fill="#0B0C0E"/><circle r="22" fill="none" stroke="#9AA0AA" stroke-width="5"/><g stroke="#9AA0AA" stroke-width="5" stroke-linecap="round"><path d="M0 -19 V19"/><path d="M-19 0 H19"/><path d="M-13.5 -13.5 L13.5 13.5"/><path d="M-13.5 13.5 L13.5 -13.5"/></g><circle r="6" fill="#E3112A"/></g></g>
-              </svg>
-            </div>
-          </div>
+          </article>
 
-          <div class="garage__panels">
-            <div class="garage__panel is-active" role="tabpanel" id="panel-damas" aria-labelledby="tab-damas" data-model="damas">
-              <h3>Chevrolet Damas</h3>
-              <p class="garage__tag" data-i18n="models.damas.tag">Rassrochka 30 oyga · 5 ta bonus bilan</p>
-              <dl class="facts">
-                <div><dt data-i18n="f.down">Bosh to'lov</dt><dd data-i18n="models.damas.down">30% dan</dd></div>
-                <div><dt data-i18n="f.term">Muddat</dt><dd data-i18n="models.damas.term">30 oy</dd></div>
-                <div><dt data-i18n="f.monthly">Oylik to'lov</dt><dd data-i18n="models.damas.monthly">1 293 000 so'mdan</dd></div>
+          <!-- Labo -->
+          <article class="glass card model" data-reveal>
+            <div class="model-media model-media--draw" aria-hidden="true">
+              <svg viewBox="0 0 640 260" class="car-draw"><path d="M30 170 L30 112 L372 112 L372 62 Q374 50 392 50 L450 48 Q482 48 502 74 L560 128 Q600 136 612 150 L614 170 Q614 180 602 180 L540 180 A40 40 0 0 1 460 180 L190 180 A40 40 0 0 1 110 180 L42 180 Q30 180 30 170 Z"/><path d="M386 62h60v56h-60zM462 60h32l54 68h-86z"/><path d="M44 128h316"/><circle cx="150" cy="180" r="38"/><circle cx="500" cy="180" r="38"/><circle cx="150" cy="180" r="14"/><circle cx="500" cy="180" r="14"/></svg>
+            </div>
+            <div class="model-body">
+              <h3 class="model-name">Chevrolet Labo</h3>
+              <p class="model-tag" data-i18n="models.labo.tag">Bonuslar bilan · shartlar so'rov bo'yicha</p>
+              <dl class="model-facts">
+                <div><dt data-i18n="f.price">Narx</dt><dd data-i18n="askPrice">Narxini so'rang</dd></div>
                 <div><dt data-i18n="f.rate">Foiz</dt><dd>0%</dd></div>
+                <div><dt data-i18n="f.docs">Hujjat</dt><dd>1 <span data-i18n="passport">pasport</span></dd></div>
               </dl>
-              <div class="garage__actions">
-                <button class="btn btn--primary" type="button" data-calc="damas" data-i18n="models.calc">Hisoblash</button>
-                <a class="btn btn--ghost" href="#lead" data-lead="Damas" data-i18n="models.ask">Ariza qoldirish</a>
+              <div class="model-actions">
+                <a class="btn btn-brand" href="tel:+998777089970" data-i18n="models.askprice">Narxini so'rash</a>
+                <a class="btn btn-ghost" href="#visit" data-lead="labo" data-i18n="models.ask">Ariza</a>
               </div>
             </div>
-            <div class="garage__panel" role="tabpanel" id="panel-cobalt" aria-labelledby="tab-cobalt" data-model="cobalt" hidden>
-              <h3>Chevrolet Cobalt <small>Style MCM · Midnight MCM</small></h3>
-              <p class="garage__tag" data-i18n="models.cobalt.tag">Rassrochka 24 oyga · 10 ta bonus bilan</p>
-              <dl class="facts">
-                <div><dt data-i18n="f.down">Bosh to'lov</dt><dd data-i18n="models.cobalt.down">50% — 82 500 000 so'm</dd></div>
-                <div><dt data-i18n="f.term">Muddat</dt><dd data-i18n="models.cobalt.term">24 oy</dd></div>
-                <div><dt data-i18n="f.monthly">Oylik to'lov</dt><dd data-i18n="models.cobalt.monthly">3 252 000 so'm</dd></div>
-                <div><dt data-i18n="f.rate">Foiz</dt><dd>0%</dd></div>
-              </dl>
-              <p class="garage__note" data-i18n="models.cobalt.note">Style MCM uchun shartlar. Midnight MCM ham 50% bosh to'lov bilan — narxini so'rang.</p>
-              <div class="garage__actions">
-                <button class="btn btn--primary" type="button" data-calc="cobalt" data-i18n="models.calc">Hisoblash</button>
-                <a class="btn btn--ghost" href="#lead" data-lead="Cobalt" data-i18n="models.ask">Ariza qoldirish</a>
-              </div>
-            </div>
-            <div class="garage__panel" role="tabpanel" id="panel-labo" aria-labelledby="tab-labo" data-model="labo" hidden>
-              <h3>Chevrolet Labo</h3>
-              <p class="garage__tag" data-i18n="models.labo.tag">Bonuslar bilan · rassrochka shartlari — so'rov bo'yicha</p>
-              <dl class="facts">
-                <div><dt data-i18n="f.price">Narx</dt><dd data-i18n="models.labo.price">Narxini so'rang</dd></div>
-                <div><dt data-i18n="f.rate">Foiz</dt><dd>0%</dd></div>
-                <div><dt data-i18n="f.bank">Bank</dt><dd data-i18n="models.labo.bank">Kerak emas</dd></div>
-                <div><dt data-i18n="f.docs">Hujjat</dt><dd data-i18n="models.labo.docs">1 pasport</dd></div>
-              </dl>
-              <div class="garage__actions">
-                <a class="btn btn--primary" href="tel:+998777089970" data-i18n="models.askprice">Narxini so'rash</a>
-                <a class="btn btn--ghost" href="#lead" data-lead="Labo" data-i18n="models.ask">Ariza qoldirish</a>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- CALCULATOR -->
-    <section class="section calc" id="calc">
-      <div class="container">
-        <div class="section__head section__head--light">
-          <h2 data-i18n="calc.title">Rassrochka kalkulyatori</h2>
-          <p data-i18n="calc.sub">Bosh to'lovni tanlang — oylik to'lovni darhol ko'ring. Hech qanday yashirin foiz yo'q.</p>
+    <section class="section section--tight" id="calc">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2 class="h2" data-i18n="calc.title">Rassrochka kalkulyatori</h2>
+          <p class="lead" data-i18n="calc.sub">Modelni va bosh to'lovni tanlang. Oylik to'lov, muddat va jami summa — yashirin foizsiz.</p>
         </div>
 
-        <div class="calc__box">
-          <div class="calc__controls">
+        <div class="glass glass-thick calc" data-reveal>
+          <div class="calc-controls">
             <div class="field">
-              <span class="field__label" data-i18n="calc.model">Model</span>
-              <div class="seg" role="radiogroup" aria-label="Model" data-i18n-aria="calc.model">
-                <button type="button" class="seg__btn is-active" role="radio" aria-checked="true" data-calc-model="damas">Damas</button>
-                <button type="button" class="seg__btn" role="radio" aria-checked="false" data-calc-model="cobalt">Cobalt Style MCM</button>
+              <span class="field-label" data-i18n="calc.model">Model</span>
+              <div class="seg seg--wrap" role="radiogroup" aria-label="Model" data-i18n-aria="calc.model" id="calcModelSeg">
+                <span class="seg-thumb" aria-hidden="true"></span>
+                <button type="button" class="seg-btn is-active" role="radio" aria-checked="true" data-calc-model="damas">Damas</button>
+                <button type="button" class="seg-btn" role="radio" aria-checked="false" data-calc-model="cobaltStyle">Cobalt Style</button>
+                <button type="button" class="seg-btn" role="radio" aria-checked="false" data-calc-model="cobaltMidnight">Cobalt Midnight</button>
+                <button type="button" class="seg-btn" role="radio" aria-checked="false" data-calc-model="labo">Labo</button>
               </div>
             </div>
-            <div class="field">
-              <span class="field__label" data-i18n="calc.down">Bosh to'lov</span>
-              <div class="seg seg--down" role="radiogroup" aria-label="Bosh to'lov" data-i18n-aria="calc.down" id="calcDown">
-                <button type="button" class="seg__btn is-active" role="radio" aria-checked="true" data-down="30">30%</button>
-                <button type="button" class="seg__btn" role="radio" aria-checked="false" data-down="40">40%</button>
-                <button type="button" class="seg__btn" role="radio" aria-checked="false" data-down="50">50%</button>
-                <button type="button" class="seg__btn" role="radio" aria-checked="false" data-down="60">60%</button>
+            <div class="field" id="calcDownField">
+              <span class="field-label" data-i18n="calc.down">Bosh to'lov</span>
+              <div class="seg" role="radiogroup" aria-label="Bosh to'lov" data-i18n-aria="calc.down" id="calcDownSeg">
+                <span class="seg-thumb" aria-hidden="true"></span>
+                <button type="button" class="seg-btn is-active" role="radio" aria-checked="true" data-down="30">30%</button>
+                <button type="button" class="seg-btn" role="radio" aria-checked="false" data-down="40">40%</button>
+                <button type="button" class="seg-btn" role="radio" aria-checked="false" data-down="50">50%</button>
+                <button type="button" class="seg-btn" role="radio" aria-checked="false" data-down="60">60%</button>
               </div>
-              <p class="field__hint" id="calcHint" data-i18n="calc.onlyCobalt" hidden>Cobalt Style MCM uchun bosh to'lov 50%</p>
+              <p class="field-hint" id="calcHint" hidden data-i18n="calc.onlyCobalt">Cobalt MCM uchun bosh to'lov — 50%.</p>
             </div>
-            <ul class="calc__terms">
-              <li data-i18n="calc.t1">Banksiz: shartnoma to'g'ridan-to'g'ri</li>
-              <li data-i18n="calc.t2">0%, ustama yo'q</li>
-              <li data-i18n="calc.t3">Penya va jarimalar yo'q</li>
-              <li data-i18n="calc.t4">Bitta pasport kifoya</li>
+            <ul class="calc-terms">
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="calc.t1">Banksiz — shartnoma to'g'ridan-to'g'ri salon bilan</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="calc.t2">0% — ustama va yashirin foizlar yo'q</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="calc.t3">Penya va jarimalar yo'q</span></li>
+              <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span data-i18n="calc.t4">1 ta pasport — kafil va ma'lumotnoma kerak emas</span></li>
             </ul>
           </div>
 
-          <div class="calc__result">
-            <div class="calc__model"><span id="calcModelName">Chevrolet Damas</span> <span class="calc__bonus" id="calcBonus" data-i18n="calc.bonus5">5 ta bonus bilan</span></div>
-            <div class="calc__grid">
-              <div class="calc__cell">
-                <span class="calc__k" data-i18n="calc.r.down">Bosh to'lov</span>
-                <span class="calc__v"><span id="rDown" data-num>33 400 000</span> <small data-i18n="sum">so'm</small></span>
-                <span class="calc__s" id="rDownPct">30%</span>
+          <div class="calc-result" id="calcResult">
+            <div class="calc-top">
+              <span class="calc-model" id="calcModelName">Chevrolet Damas</span>
+              <a class="chip chip-brand" href="#bonus" id="calcBonus"><span id="calcBonusN">5</span> <span data-i18n="calc.bonuses">ta bonus bilan</span></a>
+            </div>
+            <div class="calc-main">
+              <span class="calc-k" data-i18n="calc.r.monthly">Oylik to'lov</span>
+              <span class="calc-big"><span id="rMonthly">2 261 000</span> <small data-i18n="sum">so'm</small></span>
+              <span class="calc-s" data-i18n="calc.r.note">har oy, ustamasiz</span>
+            </div>
+            <div class="calc-grid">
+              <div class="calc-cell">
+                <span class="calc-k" data-i18n="calc.r.down">Bosh to'lov</span>
+                <span class="calc-v"><span id="rDown">33 400 000</span> <small data-i18n="sum">so'm</small></span>
+                <span class="calc-s" id="rDownPct">30%</span>
               </div>
-              <div class="calc__cell">
-                <span class="calc__k" data-i18n="calc.r.term">Muddat</span>
-                <span class="calc__v"><span id="rTerm" data-num>30</span> <small data-i18n="months">oy</small></span>
-                <span class="calc__s" data-i18n="calc.r.rate">0% foiz</span>
+              <div class="calc-cell">
+                <span class="calc-k" data-i18n="calc.r.term">Muddat</span>
+                <span class="calc-v"><span id="rTerm">30</span> <small data-i18n="months">oy</small></span>
+                <span class="calc-s" data-i18n="calc.r.rate">0% foiz</span>
               </div>
-              <div class="calc__cell calc__cell--main">
-                <span class="calc__k" data-i18n="calc.r.monthly">Oylik to'lov</span>
-                <span class="calc__v calc__v--big"><span id="rMonthly" data-num>2 261 000</span> <small data-i18n="sum">so'm</small></span>
-                <span class="calc__s" data-i18n="calc.r.note">Har oy, ustamasiz</span>
+              <div class="calc-cell calc-cell--wide">
+                <span class="calc-k" data-i18n="calc.r.total">Jami (hisoblangan)</span>
+                <span class="calc-v"><span id="rTotal">101 230 000</span> <small data-i18n="sum">so'm</small></span>
+                <span class="calc-s" data-i18n="calc.r.totalNote">= bosh to'lov + oylik × muddat</span>
               </div>
             </div>
-            <a class="btn btn--light calc__cta" href="#lead" id="calcLead" data-i18n="calc.cta">Shu shart bilan ariza qoldirish</a>
-            <p class="calc__fine" data-i18n="calc.fine">Hisob-kitob Sergeli Avto e'lon qilgan shartlar asosida. Aniq shartlar shartnomada belgilanadi.</p>
+            <div class="calc-actions">
+              <a class="btn btn-brand btn-lg" href="#visit" id="calcLead" data-magnetic><span data-i18n="calc.cta">Shu shart bilan ariza</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a class="btn btn-ghost btn-lg" href="tel:+998777089970"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="cta.call">Qo'ng'iroq qilish</span></a>
+            </div>
+            <p class="fine" data-i18n="calc.fine">Hisob Sergeli Avto e'lon qilgan shartlar asosida. Aniq shartlar shartnomada belgilanadi.</p>
+          </div>
+
+          <div class="calc-result calc-result--ask" id="calcAsk" hidden>
+            <span class="calc-model">Chevrolet Labo</span>
+            <p class="calc-ask-title" data-i18n="calc.labo.title">Labo narxini so'rang</p>
+            <p class="calc-ask-text" data-i18n="calc.labo.text">Labo bo'yicha shartlar so'rov bo'yicha beriladi: banksiz, 0%, jarimalarsiz, bonuslar bilan. Qo'ng'iroq qiling yoki ariza qoldiring — 2–3 soat ichida javob.</p>
+            <div class="calc-actions">
+              <a class="btn btn-brand btn-lg" href="tel:+998777089970"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="models.askprice">Narxini so'rash</span></a>
+              <a class="btn btn-ghost btn-lg" href="#visit" data-lead="labo" data-i18n="models.ask">Ariza</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- BONUSES -->
-    <section class="section bonus" id="bonus">
-      <div class="container">
-        <div class="section__head">
-          <h2 data-i18n="bonus.title">Kalit bilan birga — bonuslar</h2>
-          <p data-i18n="bonus.sub">Har bir avtomobil tayyor holda topshiriladi: bo'yoq apparatda tekshirilgan, moyka qilingan, kerakli aksessuarlar o'rnatilgan.</p>
+    <section class="section" id="bonus">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2 class="h2" data-i18n="bonus.title">Kalit bilan birga — bonuslar</h2>
+          <p class="lead" data-i18n="bonus.sub">Avtomobil tayyor holda topshiriladi: bo'yoq apparatda tekshirilgan, moyka qilingan, aksessuarlar o'rnatilgan.</p>
         </div>
-        <div class="bonus__cols">
-          <div class="bonus__col">
-            <h3>Cobalt <span data-i18n="bonus.cobalt.n">— 10 ta bonus</span></h3>
-            <ul class="bonus__list">
-              <li><svg class="bico" viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg><span data-i18n="b.dvr">Videoregistrator</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M8 6v12M12 6v12M16 6v12"/></svg><span data-i18n="b.mats">Poliklar</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M5 20V5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v15"/><path d="M4 20h11M14 9h2a2 2 0 0 1 2 2v5a1.5 1.5 0 0 0 3 0V9l-2-2"/><path d="M7 8h5v4H7z"/></svg><span data-i18n="b.fuel">Benzin</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M6 10h12l-1.2 9.5a1 1 0 0 1-1 .5H8.2a1 1 0 0 1-1-.5L6 10z"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span data-i18n="b.bar">Bar</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M3 10c2-3 6-4 9-4s7 1 9 4v6H3z"/><path d="M3 13h18"/></svg><span data-i18n="b.dash">Torpedo chexoli</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="1.5"/><path d="M7 12h2M11 12h2M15 12h2"/></svg><span data-i18n="b.plate">Podnomer</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="18" rx="2.5"/><circle cx="12" cy="8" r="1.2" fill="currentColor"/><path d="M10 13h4M10 16h4"/></svg><span data-i18n="b.key">Pult chexoli</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><circle cx="9" cy="9" r="5"/><path d="M12 13l4 7H6"/><path d="M15 6l3-2M16 10l4 0"/></svg><span data-i18n="b.mud">Brizgoviklar</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 10h18M3 14h18M8 5v14M13 5v14"/></svg><span data-i18n="b.net">Setka</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M12 3c3 4 5 7 5 10a5 5 0 0 1-10 0c0-3 2-6 5-10z"/><path d="M12 20v1"/></svg><span data-i18n="b.wash">Moyka</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M4 16l8-8 4 4-8 8H4z"/><path d="M14 6l4 4M12 8l2-2 4 4-2 2"/><path d="M4 20h7"/></svg><span data-i18n="b.paint">Bo'yoq apparatda tekshiriladi</span></li>
+        <div class="bonus-grid">
+          <div class="glass card bonus-col" data-reveal>
+            <h3 class="h3">Cobalt <span class="muted">· 10 <span data-i18n="bonus.n">ta bonus</span></span></h3>
+            <ul class="chips">
+              <li class="chip" data-i18n="b.dvr">Videoregistrator</li>
+              <li class="chip" data-i18n="b.mats">Poliklar</li>
+              <li class="chip" data-i18n="b.fuel">Benzin</li>
+              <li class="chip" data-i18n="b.bar">Bar</li>
+              <li class="chip" data-i18n="b.dash">Torpedo chexoli</li>
+              <li class="chip" data-i18n="b.plate">Podnomer</li>
+              <li class="chip" data-i18n="b.key">Pult chexoli</li>
+              <li class="chip" data-i18n="b.mud">Brizgoviklar</li>
+              <li class="chip" data-i18n="b.net">Setka</li>
+              <li class="chip" data-i18n="b.wash">Moyka</li>
+              <li class="chip" data-i18n="b.paint">Bo'yoq apparatda tekshiruv</li>
             </ul>
           </div>
-          <div class="bonus__col">
-            <h3>Damas <span data-i18n="bonus.damas.n">— 5 ta bonus</span></h3>
-            <ul class="bonus__list">
-              <li><svg class="bico" viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg><span data-i18n="b.dvr">Videoregistrator</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M8 6v12M12 6v12M16 6v12"/></svg><span data-i18n="b.mats">Poliklar</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="1.5"/><path d="M7 12h2M11 12h2M15 12h2"/></svg><span data-i18n="b.plate">Podnomer</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M12 3c3 4 5 7 5 10a5 5 0 0 1-10 0c0-3 2-6 5-10z"/><path d="M12 20v1"/></svg><span data-i18n="b.wash">Moyka</span></li>
-              <li><svg class="bico" viewBox="0 0 24 24"><path d="M4 16l8-8 4 4-8 8H4z"/><path d="M14 6l4 4M12 8l2-2 4 4-2 2"/><path d="M4 20h7"/></svg><span data-i18n="b.paint">Bo'yoq apparatda tekshiriladi</span></li>
+          <div class="glass card bonus-col" data-reveal>
+            <h3 class="h3">Damas <span class="muted">· 5 <span data-i18n="bonus.n">ta bonus</span></span></h3>
+            <ul class="chips">
+              <li class="chip" data-i18n="b.dvr">Videoregistrator</li>
+              <li class="chip" data-i18n="b.mats">Poliklar</li>
+              <li class="chip" data-i18n="b.plate">Podnomer</li>
+              <li class="chip" data-i18n="b.wash">Moyka</li>
+              <li class="chip" data-i18n="b.paint">Bo'yoq apparatda tekshiruv</li>
             </ul>
-            <p class="bonus__labo" data-i18n="bonus.labo">Labo ham bonuslar bilan topshiriladi — ro'yxatni so'rang.</p>
+            <p class="muted bonus-labo" data-i18n="bonus.labo">Labo ham bonuslar bilan topshiriladi — ro'yxatni so'rang.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STEPS -->
-    <section class="section steps" id="steps">
-      <div class="container">
-        <div class="section__head section__head--light">
-          <h2 data-i18n="steps.title">Ertalab murojaat — kunduzi kalit</h2>
-          <p data-i18n="steps.sub">Jarayon to'rt bosqich. Bank, kafil va qog'ozbozlik yo'q.</p>
+    <!-- HOW IT WORKS -->
+    <section class="section section--tight" id="steps">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2 class="h2" data-i18n="steps.title">Ertalab murojaat — kunduzi kalit</h2>
+          <p class="lead" data-i18n="steps.sub">Bank, kafil va qog'ozbozlik yo'q. Jarayon to'rt qadam.</p>
         </div>
-        <ol class="steps__list">
-          <li class="step">
-            <span class="step__n">1</span>
-            <h3 data-i18n="steps.1.t">Modelni tanlaysiz</h3>
+        <ol class="steps">
+          <li class="glass card step" data-reveal>
+            <svg class="step-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5v5H3z"/><circle cx="7" cy="16" r="1.5"/><circle cx="17" cy="16" r="1.5"/></svg>
+            <h3 class="h4" data-i18n="steps.1.t">Modelni tanlaysiz</h3>
             <p data-i18n="steps.1.d">Damas, Cobalt yoki Labo. Bosh to'lov foizini o'zingiz belgilaysiz.</p>
           </li>
-          <li class="step">
-            <span class="step__n">2</span>
-            <h3 data-i18n="steps.2.t">Bitta pasport</h3>
+          <li class="glass card step" data-reveal>
+            <svg class="step-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="2.5"/><path d="M8 17c1-2 7-2 8 0"/></svg>
+            <h3 class="h4" data-i18n="steps.2.t">Bitta pasport</h3>
             <p data-i18n="steps.2.d">Boshqa hujjat, ma'lumotnoma yoki kafil talab qilinmaydi.</p>
           </li>
-          <li class="step">
-            <span class="step__n">3</span>
-            <h3 data-i18n="steps.3.t">Bosh to'lov</h3>
+          <li class="glass card step" data-reveal>
+            <svg class="step-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M7 15h3"/></svg>
+            <h3 class="h4" data-i18n="steps.3.t">Bosh to'lov</h3>
             <p data-i18n="steps.3.d">Shartnoma bevosita Sergeli Avto bilan. Bank yo'q, foiz yo'q.</p>
           </li>
-          <li class="step">
-            <span class="step__n">4</span>
-            <h3 data-i18n="steps.4.t">2–3 soatda kalit</h3>
+          <li class="glass card step" data-reveal>
+            <svg class="step-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M4 14l6-6 5 5 5-3"/><path d="M8 21l2-7"/></svg>
+            <h3 class="h4" data-i18n="steps.4.t">2–3 soatda kalit</h3>
             <p data-i18n="steps.4.d">Toshkentda yoki 12 viloyatning istalganida yetkazib beramiz.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <!-- OWNERS -->
-    <section class="section owners" id="owners">
-      <div class="container">
-        <div class="section__head">
-          <h2 data-i18n="owners.title">Tabriklaymiz! Navbatdagi avtomobil o'z egasini topdi</h2>
-          <p data-i18n="owners.sub">Har kuni Instagram'da yangi topshiruv videolari. Keyingisi — sizniki bo'lishi mumkin.</p>
+    <!-- ABOUT / GALLERY / TRUST -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <h2 class="h2" data-i18n="about.title">Salon — Sergeli, Index. Har kuni topshiruv.</h2>
+          <p class="lead" data-i18n="about.sub">Avtomobil sotish va sotib olish xizmati. Yangi Chevrolet joyida — kelib ko'ring, o'tirib ko'ring, bugun olib keting.</p>
         </div>
-        <div class="owners__stats">
-          <div class="stat"><b><span data-count="111" data-suffix="K">111K</span></b><span data-i18n="st.followers">obunachi</span></div>
-          <div class="stat"><b><span data-count="381">381</span></b><span data-i18n="st.posts">post</span></div>
-          <div class="stat"><b><span data-count="12">12</span></b><span data-i18n="st.regions">viloyat</span></div>
-          <div class="stat"><b><span data-count="0" data-suffix="%">0%</span></b><span data-i18n="st.rate">foiz</span></div>
+        <div class="gallery">
+          <figure class="glass gal gal--a" data-reveal data-tilt>
+            <picture>
+              <source srcset="assets/img/facade-day.webp" type="image/webp">
+              <img src="assets/img/facade-day.jpg" width="668" height="790" alt="Kunduzgi topshiruv: Sergeli Avto fasadi oldida yangi oq Cobalt va ikki kishi" loading="lazy" decoding="async" data-i18n-alt="alt.day">
+            </picture>
+            <figcaption data-i18n="gal.a">Topshiruv kuni — salon oldida</figcaption>
+          </figure>
+          <figure class="glass gal gal--b" data-reveal data-tilt>
+            <picture>
+              <source srcset="assets/img/staff-cobalts.webp" type="image/webp">
+              <img src="assets/img/staff-cobalts.jpg" width="668" height="750" alt="Salon xodimi oq va qora Cobalt orasida, tungi maydoncha" loading="lazy" decoding="async" data-i18n-alt="alt.staff">
+            </picture>
+            <figcaption data-i18n="gal.b">Cobalt Style va Midnight — joyida</figcaption>
+          </figure>
+          <figure class="glass gal gal--c" data-reveal>
+            <picture>
+              <source srcset="assets/img/sign-night.webp" type="image/webp">
+              <img src="assets/img/sign-night.jpg" width="418" height="198" alt="SERGELI AUTO yozuvi va telefon raqami, tungi chiroq" loading="lazy" decoding="async" data-i18n-alt="alt.sign">
+            </picture>
+            <figcaption data-i18n="gal.c">Bizni shu yozuvdan topasiz</figcaption>
+          </figure>
+          <a class="glass gal gal--d trust" href="https://instagram.com/sergeli_auto" target="_blank" rel="noopener" data-reveal>
+            <div class="trust-row">
+              <div class="trust-stat"><b><span data-count="111" data-suffix="K">111K</span></b><span data-i18n="st.followers">obunachi</span></div>
+              <div class="trust-stat"><b><span data-count="381">381</span></b><span data-i18n="st.posts">post — topshiruvlar</span></div>
+              <div class="trust-stat"><b><span data-count="12">12</span></b><span data-i18n="st.regions">viloyat</span></div>
+              <div class="trust-stat"><b>0%</b><span data-i18n="st.rate">foiz, penya, jarima</span></div>
+            </div>
+            <span class="link-arrow"><span data-i18n="about.ig">@sergeli_auto — har kuni yangi topshiruv videolari</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
         </div>
-        <div class="owners__row">
-          <a class="owner" href="https://instagram.com/sergeli_auto" target="_blank" rel="noopener">
-            <span class="owner__badge" data-i18n="owners.badge">Tabriklaymiz!</span>
-            <svg class="owner__car" viewBox="0 0 640 260" aria-hidden="true"><path fill="currentColor" d="M30 170 L30 72 Q30 52 50 52 L420 50 Q456 50 480 74 L560 128 Q600 136 612 150 L614 170 Q614 180 602 180 L540 180 A40 40 0 0 1 460 180 L190 180 A40 40 0 0 1 110 180 L42 180 Q30 180 30 170 Z"/><circle cx="150" cy="180" r="38" fill="#15171B" stroke="currentColor" stroke-width="8"/><circle cx="500" cy="180" r="38" fill="#15171B" stroke="currentColor" stroke-width="8"/></svg>
-            <span class="owner__model">Damas</span>
-            <span class="owner__text" data-i18n="owners.found">o'z egasini topdi</span>
-          </a>
-          <a class="owner" href="https://instagram.com/sergeli_auto" target="_blank" rel="noopener">
-            <span class="owner__badge" data-i18n="owners.badge">Tabriklaymiz!</span>
-            <svg class="owner__car" viewBox="0 0 640 260" aria-hidden="true"><path fill="currentColor" d="M30 165 L30 135 Q32 118 48 114 L150 108 L215 72 Q225 62 245 60 L390 58 Q410 58 425 70 L480 108 L580 118 Q608 122 612 142 L612 165 Q612 176 600 178 L548 178 A44 44 0 0 1 432 178 L208 178 A44 44 0 0 1 92 178 L42 178 Q30 176 30 165 Z"/><circle cx="150" cy="178" r="40" fill="#15171B" stroke="currentColor" stroke-width="8"/><circle cx="490" cy="178" r="40" fill="#15171B" stroke="currentColor" stroke-width="8"/></svg>
-            <span class="owner__model">Cobalt</span>
-            <span class="owner__text" data-i18n="owners.found">o'z egasini topdi</span>
-          </a>
-          <a class="owner" href="https://instagram.com/sergeli_auto" target="_blank" rel="noopener">
-            <span class="owner__badge" data-i18n="owners.badge">Tabriklaymiz!</span>
-            <svg class="owner__car" viewBox="0 0 640 260" aria-hidden="true"><path fill="currentColor" d="M30 170 L30 112 L372 112 L372 62 Q374 50 392 50 L450 48 Q482 48 502 74 L560 128 Q600 136 612 150 L614 170 Q614 180 602 180 L540 180 A40 40 0 0 1 460 180 L190 180 A40 40 0 0 1 110 180 L42 180 Q30 180 30 170 Z"/><circle cx="150" cy="180" r="38" fill="#15171B" stroke="currentColor" stroke-width="8"/><circle cx="500" cy="180" r="38" fill="#15171B" stroke="currentColor" stroke-width="8"/></svg>
-            <span class="owner__model">Labo</span>
-            <span class="owner__text" data-i18n="owners.found">o'z egasini topdi</span>
-          </a>
-          <a class="owner owner--next" href="https://ig.me/m/sergeli_auto" target="_blank" rel="noopener">
-            <span class="owner__badge owner__badge--q">?</span>
-            <span class="owner__model" data-i18n="owners.you">Keyingisi — siz</span>
-            <span class="owner__text" data-i18n="owners.write">Instagram'da yozing</span>
-          </a>
-        </div>
-        <a class="link-arrow" href="https://instagram.com/sergeli_auto" target="_blank" rel="noopener">
-          <span data-i18n="owners.all">Barcha topshiruvlar @sergeli_auto sahifasida</span>
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
       </div>
     </section>
 
-    <!-- CONTACTS + LEAD -->
-    <section class="section contacts" id="contacts">
-      <div class="container contacts__grid">
-        <div class="contacts__info">
-          <h2 data-i18n="contacts.title">Keling yoki yozing — bugun javob beramiz</h2>
-          <ul class="contacts__list">
+    <!-- VISIT: location + request form -->
+    <section class="section section--tight" id="visit">
+      <div class="wrap visit-grid">
+        <div class="visit-info" data-reveal>
+          <h2 class="h2" data-i18n="visit.title">Keling yoki yozing — bugun javob beramiz</h2>
+          <ul class="visit-list">
             <li>
-              <span class="contacts__k" data-i18n="contacts.phone">Telefon</span>
-              <a href="tel:+998777089970" class="contacts__v">+998 77 708 99 70</a>
-              <a href="tel:+998880140771" class="contacts__v contacts__v--sm">+998 88 014 07 71</a>
+              <span class="visit-k" data-i18n="visit.addr">Manzil</span>
+              <span class="visit-v" data-i18n="addr.full">Toshkent sh., Sergeli tumani, Index</span>
+              <div class="visit-links">
+                <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=Sergeli+Index+Toshkent" target="_blank" rel="noopener"><span>Google Maps</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                <a class="link-arrow" href="https://yandex.uz/maps/?text=Sergeli%20Index%20Toshkent" target="_blank" rel="noopener"><span>Yandex Maps</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+              </div>
             </li>
             <li>
-              <span class="contacts__k" data-i18n="contacts.hours">Ish vaqti</span>
-              <span class="contacts__v" data-i18n="contacts.hoursv">Har kuni 09:00–19:00</span>
+              <span class="visit-k" data-i18n="visit.hours">Ish vaqti</span>
+              <span class="visit-v"><i class="dot-live" id="openDotVisit"></i><span data-i18n="hours">Har kuni 09:00–19:00</span></span>
+              <span class="muted" id="openHint" data-i18n="open.hint">Tashkent vaqti bilan</span>
             </li>
             <li>
-              <span class="contacts__k" data-i18n="contacts.addr">Manzil</span>
-              <span class="contacts__v" data-i18n="contacts.addrv">Toshkent sh., Sergeli tumani (Index)</span>
-              <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&query=Sergeli+Index+Toshkent" target="_blank" rel="noopener">
-                <span data-i18n="contacts.maps">Google Maps'da ochish</span>
-                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
+              <span class="visit-k" data-i18n="visit.phone">Telefon</span>
+              <a href="tel:+998777089970" class="visit-v visit-tel">+998 77 708 99 70</a>
+              <a href="tel:+998880140771" class="visit-v visit-tel">+998 88 014 07 71</a>
             </li>
             <li>
-              <span class="contacts__k">Instagram</span>
-              <a href="https://instagram.com/sergeli_auto" target="_blank" rel="noopener" class="contacts__v">@sergeli_auto</a>
+              <span class="visit-k">Instagram</span>
+              <a href="https://instagram.com/sergeli_auto" target="_blank" rel="noopener" class="visit-v">@sergeli_auto</a>
+              <a class="link-arrow" href="https://ig.me/m/sergeli_auto" target="_blank" rel="noopener"><span data-i18n="cta.ig">Instagram'da yozish</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
             </li>
           </ul>
         </div>
 
-        <div class="lead" id="lead">
-          <form class="lead__form" id="leadForm" novalidate>
-            <h3 data-i18n="lead.title">Ariza qoldiring</h3>
-            <p class="lead__sub" data-i18n="lead.sub">Ish vaqtida qo'ng'iroq qilamiz va shartlarni tushuntiramiz.</p>
-            <div class="input">
+        <div class="glass glass-thick rq" id="lead" data-reveal>
+          <form class="rq-form" id="leadForm" novalidate>
+            <h3 class="h3" data-i18n="lead.title">Ariza yoki tashrifga yozilish</h3>
+            <p class="muted rq-sub" data-i18n="lead.sub">Ish vaqtida qo'ng'iroq qilamiz, shartlarni tushuntiramiz va kelish vaqtini kelishamiz.</p>
+
+            <div class="seg seg--type" role="radiogroup" aria-label="Murojaat turi" data-i18n-aria="lead.type" id="leadTypeSeg">
+              <span class="seg-thumb" aria-hidden="true"></span>
+              <button type="button" class="seg-btn is-active" role="radio" aria-checked="true" data-type="call" data-i18n="lead.type.call">Qo'ng'iroq qiling</button>
+              <button type="button" class="seg-btn" role="radio" aria-checked="false" data-type="visit" data-i18n="lead.type.visit">Salonga kelaman</button>
+            </div>
+
+            <div class="rq-field">
               <label for="leadName" data-i18n="lead.name">Ismingiz</label>
               <input type="text" id="leadName" name="name" autocomplete="name" autocapitalize="words" required minlength="2" aria-describedby="leadNameErr" data-i18n-ph="lead.name.ph" placeholder="Masalan, Bunyod">
-              <p class="input__err" id="leadNameErr" hidden data-i18n="lead.err.name">Ismingizni kiriting (kamida 2 ta harf).</p>
+              <svg class="rq-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+              <p class="rq-error" id="leadNameErr" hidden data-i18n="lead.err.name">Ismingizni kiriting (kamida 2 ta harf).</p>
             </div>
-            <div class="input">
+            <div class="rq-field">
               <label for="leadPhone" data-i18n="lead.phone">Telefon</label>
-              <input type="tel" id="leadPhone" name="phone" autocomplete="tel" inputmode="tel" required pattern="^\+?[0-9\s\-\(\)]{9,}$" aria-describedby="leadPhoneErr" placeholder="+998 __ ___ __ __">
-              <p class="input__err" id="leadPhoneErr" hidden data-i18n="lead.err.phone">Telefon raqamini +998 bilan to'liq kiriting.</p>
+              <input type="tel" id="leadPhone" name="phone" autocomplete="tel" inputmode="tel" required aria-describedby="leadPhoneErr" placeholder="+998 __ ___ __ __">
+              <svg class="rq-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+              <p class="rq-error" id="leadPhoneErr" hidden data-i18n="lead.err.phone">Telefon raqamini +998 bilan to'liq kiriting.</p>
             </div>
-            <div class="lead__row">
-              <div class="input">
+            <div class="rq-row">
+              <div class="rq-field">
                 <label for="leadModel" data-i18n="lead.model">Model</label>
                 <select name="model" id="leadModel">
-                  <option value="Damas">Damas</option>
-                  <option value="Cobalt">Cobalt</option>
-                  <option value="Labo">Labo</option>
+                  <option value="damas">Damas</option>
+                  <option value="cobaltStyle">Cobalt Style MCM</option>
+                  <option value="cobaltMidnight">Cobalt Midnight MCM</option>
+                  <option value="labo">Labo</option>
                 </select>
               </div>
-              <div class="input">
+              <div class="rq-field">
                 <label for="leadDown" data-i18n="lead.down">Bosh to'lov</label>
                 <select name="down" id="leadDown">
                   <option value="30">30%</option>
@@ -534,21 +539,31 @@
                 </select>
               </div>
             </div>
-            <p class="lead__error" id="leadError" role="alert" tabindex="-1" hidden data-i18n="lead.error">Ism va telefon raqamini to'g'ri kiriting.</p>
-            <button class="btn btn--primary btn--block" type="submit" data-i18n="lead.submit">Yuborish</button>
-            <p class="lead__fine" data-i18n="lead.fine">Ma'lumotlar faqat Sergeli Avto bilan bog'lanish uchun ishlatiladi.</p>
+            <div class="rq-field rq-field--visit" id="leadWhenField" hidden>
+              <label for="leadWhen" data-i18n="lead.when">Qachon kelasiz?</label>
+              <select name="when" id="leadWhen">
+                <option value="today" data-i18n="when.today">Bugun</option>
+                <option value="tomorrow" data-i18n="when.tomorrow">Ertaga</option>
+                <option value="week" data-i18n="when.week">Shu hafta ichida</option>
+              </select>
+            </div>
+            <p class="rq-summary muted" id="leadSummary"></p>
+            <p class="rq-error rq-error--form" id="leadError" role="alert" tabindex="-1" hidden data-i18n="lead.error">Ism va telefon raqamini to'g'ri kiriting.</p>
+            <button class="btn btn-brand btn-lg btn-block" type="submit" data-magnetic><span data-i18n="lead.submit">Yuborish</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="fine" data-i18n="lead.fine">Ma'lumotlar faqat Sergeli Avto bilan bog'lanish uchun ishlatiladi.</p>
           </form>
 
-          <div class="lead__success" id="leadSuccess" hidden tabindex="-1">
-            <svg class="lead__check" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30"/><path d="M20 33l8 8 16-18"/></svg>
-            <h3 data-i18n="lead.ok.title">Rahmat! Arizangiz tayyor</h3>
-            <p data-i18n="lead.ok.text">Xabar matni nusxalandi. Tezroq javob olish uchun hozir qo'ng'iroq qiling yoki Instagram'da yozing — matnni shunchaki joylashtiring.</p>
-            <pre class="lead__msg" id="leadMsg"></pre>
-            <div class="lead__ok-actions">
-              <a class="btn btn--primary" href="tel:+998777089970" data-i18n="cta.call">Qo'ng'iroq qilish</a>
-              <a class="btn btn--light" href="https://ig.me/m/sergeli_auto" target="_blank" rel="noopener" data-i18n="cta.ig">Instagram'da yozish</a>
+          <div class="rq-done" id="leadSuccess" hidden tabindex="-1">
+            <div class="rq-sparks" id="sparks" aria-hidden="true"></div>
+            <svg class="rq-check" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="29"/><path d="M20 33l8 8 16-18"/></svg>
+            <h3 class="h3" data-i18n="lead.ok.title">Rahmat! Arizangiz tayyor</h3>
+            <p class="muted" id="leadOkText" data-i18n="lead.ok.text">Xabar matni nusxalandi. Tezroq javob olish uchun hozir qo'ng'iroq qiling yoki Instagram'da yozing — matnni shunchaki joylashtiring.</p>
+            <pre class="rq-msg" id="leadMsg"></pre>
+            <div class="rq-done-actions">
+              <a class="btn btn-brand" href="tel:+998777089970" data-i18n="cta.call">Qo'ng'iroq qilish</a>
+              <a class="btn btn-glass" href="https://ig.me/m/sergeli_auto" target="_blank" rel="noopener" data-i18n="cta.ig">Instagram'da yozish</a>
             </div>
-            <button class="lead__again" type="button" id="leadAgain" data-i18n="lead.again">Yana bir ariza</button>
+            <button class="rq-again" type="button" id="leadAgain" data-i18n="lead.again">Yana bir ariza</button>
           </div>
         </div>
       </div>
@@ -556,25 +571,27 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <a class="brand brand--footer" href="#top" aria-label="Sergeli Avto">
-        <span class="brand__mark" aria-hidden="true">SA</span>
-        <span class="brand__name">SERGELI<b>AVTO</b></span>
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top" aria-label="Sergeli Avto — boshiga">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 30c2-7 6-12 12-14h10c6 2 9 7 10 14" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M4 31h40" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><circle cx="15" cy="35" r="3.5" fill="currentColor"/><circle cx="33" cy="35" r="3.5" fill="currentColor"/></svg></span>
+        <span class="brand-name">SERGELI<b>AVTO</b></span>
       </a>
-      <p class="footer__bio" data-i18n="footer.bio">Avtomobil sotish va sotib olish xizmati · Toshkent, Sergeli</p>
-      <p class="footer__by"><span data-i18n="footer.site">Sayt:</span> <a href="https://w2w.uz" target="_blank" rel="noopener">Win to Win · w2w.uz</a></p>
+      <p class="muted" data-i18n="footer.bio">Avtomobil sotish va sotib olish xizmati · Toshkent, Sergeli tumani (Index) · Har kuni 09:00–19:00</p>
+      <p class="footer-by"><span data-i18n="footer.site">Sayt:</span> <a href="https://w2w.uz" target="_blank" rel="noopener">Win to Win · w2w.uz</a></p>
     </div>
   </footer>
 
-  <div class="mobile-bar" role="group" aria-label="Tezkor aloqa" data-i18n-aria="bar.label">
-    <a class="btn btn--primary" href="tel:+998777089970"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="cta.callShort">Qo'ng'iroq</span></a>
-    <a class="btn btn--light" href="https://ig.me/m/sergeli_auto" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Instagram</span></a>
+  <!-- Sticky mobile CTA -->
+  <div class="mobile-bar glass glass-thick" role="group" aria-label="Tezkor aloqa" data-i18n-aria="bar.label">
+    <a class="btn btn-brand" href="tel:+998777089970"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="cta.callShort">Qo'ng'iroq</span></a>
+    <a class="btn btn-ghost" href="#calc"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h3M13 11h3M8 15h3M13 15h3"/></svg><span data-i18n="nav.calc">Kalkulyator</span></a>
+    <a class="btn btn-ghost btn-icon" href="https://ig.me/m/sergeli_auto" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
-  <script src="assets/js/i18n.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/i18n.js?v=4" defer></script>
+  <script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>
