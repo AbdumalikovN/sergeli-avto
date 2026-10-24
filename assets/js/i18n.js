@@ -1,196 +1,88 @@
-/* Sergeli Avto — UZ (default) / RU dictionary. v5 */
-window.SA_I18N = {
-  uz: {
-    "meta.title": "Sergeli Avto — Yangi Chevrolet 0% rassrochkada, banksiz | Toshkent, Sergeli",
-    "meta.desc": "Sergeli Avto — Toshkentdagi avtomobil sotish va sotib olish xizmati. Damas, Cobalt, Labo banksiz, foizsiz, jarimalarsiz rassrochkada. 1 pasport bilan, 12 viloyatga. 2–3 soat ichida kalit sizda.",
-    "skip": "Asosiy mazmunga o'tish",
-    "nav.models": "Modellar", "nav.calc": "Kalkulyator", "nav.why": "Nega biz", "nav.faq": "Savollar", "nav.contact": "Aloqa",
-    "nav.label": "Bo'limlar",
-    "hours": "Har kuni 09:00–19:00",
-    "open.now": "Hozir ochiq", "open.closed": "Hozir yopiq · 09:00 da ochiladi",
-    "addr": "Toshkent sh., Sergeli tumani, Index",
-    "sum": "so'm", "perMonth": "so'm oyiga", "months": "oy",
+/* Sergeli Avto — UZ is authored in the HTML; RU is applied here before first paint (script sits at the end of <body>).
+   data-i18n (text) · data-i18n-html (markup) · data-i18n-label (aria-label) · data-i18n-alt · data-i18n-content · data-i18n-open. */
+(function () {
+  'use strict';
+  var RU = {
+    'meta.title': 'Sergeli Avto — новые Chevrolet в рассрочку 0%, без банка | Ташкент, Сергели',
+    'meta.desc': 'Sergeli Avto — новые Chevrolet Damas, Cobalt и Labo в рассрочку без банка, без процентов, без штрафов. По одному паспорту, в 12 областей. Ключи за 2–3 часа. Ташкент, Сергелийский район, Index.',
+    'skip': 'К содержанию', 'boot.label': 'Загрузка сайта', 'boot.skip': 'Пропустить', 'boot.s1': 'Процент', 'boot.s2': 'Областей', 'boot.s3': 'Паспорт', 'boot.loaded': 'Загружено ',
+    'logo.label': 'Sergeli Avto, на главную', 'nav.label': 'Основная навигация', 'nav.mobile': 'Мобильная навигация',
+    'nav.models': 'Модели', 'nav.calc': 'Калькулятор', 'nav.why': 'Почему мы', 'nav.bonus': 'Бонусы', 'nav.faq': 'Вопросы', 'nav.contact': 'Контакты',
+    'lang.label': 'Язык сайта', 'theme.label': 'Светлая тема', 'theme.dark': 'Тёмная тема', 'sound.label': 'Звук и музыка', 'cta.request': 'Оставить заявку', 'menu.open': 'Открыть меню', 'close': 'Закрыть',
+    'hours': 'Ежедневно 09:00–19:00', 'addr': 'г. Ташкент, Сергелийский район, Index', 'sum': 'сум', 'mo': 'мес.', 'bonusN': 'бонусов',
+    'hero.pill': 'рассрочка 0%', 'hero.h1': 'Новый Chevrolet — <span class="grad-text">без банка и процентов.</span>',
+    'hero.lead': 'Damas, Cobalt и Labo — в рассрочку без банка, без процентов, без штрафов и пени. Один паспорт, доставка в 12 областей, ключи за 2–3 часа.',
+    'hero.call': 'Позвонить', 'hero.calc': 'Рассчитать платёж', 'hero.m1': 'процентов и банка', 'hero.m2': 'паспорт — достаточно', 'hero.m3': 'областей доставки', 'hero.m4': 'и ключи у вас', 'hero.hours': 'часа',
+    'hero.photoAlt': 'Салон Sergeli Avto ночью: подсвеченный фасад и новые автомобили Chevrolet', 'hero.c1': 'Ключи за 2–3 часа', 'hero.c1s': 'Ташкент, Сергели, Index', 'hero.c2': '1 паспорт', 'hero.c2s': 'Без банка и поручителя', 'hero.scroll': 'Вниз',
+    'facts.title': 'процентов, банка, поручителя и штрафов — ничего этого в Sergeli Avto нет. Новый Chevrolet в 12 областей по одному паспорту.', 'facts.pause': 'Пауза',
+    't.foiz': 'процентов', 't.banksiz': 'без поручителя', 't.pasport': 'других документов не нужно', 't.viloyat': 'доставляем', 't.hours': 'ежедневно', 't.penya': 'без пени', 't.kalit': 'и ключи у вас', 't.foizsiz': 'рассрочка 0%', 't.kafil': 'поручитель не нужен', 't.tez': 'быстро и недорого', 't.yangi': 'новые автомобили', 't.bonus': 'к каждому авто', 't.banksiz2': 'без банка',
+    'st.eb': 'Почему Sergeli Avto', 'st.title': 'Автокредит в банке — десятки бумаг. <span class="grad-text">В Sergeli Avto — один паспорт.</span>',
+    'st.s1': 'процентов — без банка, поручителя, штрафов и пени', 'st.pasport': 'паспорт', 'st.s2': 'больше никаких справок, документов и залога', 'st.s3': 'от оформления до ключей, доставка в 12 областей',
+    'st.note': 'Карточки слева — типичные этапы банковского автокредита (обобщённый пример), не о конкретном банке.',
+    'st.c1': 'Справка о доходах', 'st.c1s': 'Банк · с места работы', 'st.c2': 'Поручитель', 'st.c2s': 'Банк · 1–2 человека', 'st.c3': 'Очередь в банке', 'st.c3s': 'Отделение · рабочие дни', 'st.c4': 'Годовой процент', 'st.c4s': 'Кредит · переплата каждый месяц',
+    'st.c5': 'Штрафы и пеня', 'st.c5s': 'За просрочку платежа', 'st.c6': 'Проверка кредитной истории', 'st.c6s': 'Скоринг · 1–3 дня', 'st.c7': 'Страховка', 'st.c7s': 'Ежегодно · обязательно', 'st.c8': 'Залог', 'st.c8s': 'Авто в залоге у банка',
+    'st.paper': 'бумаг', 'st.q': 'Что нужно?', 'st.a': '1 паспорт → <span class="grad-text">ключи за 2–3 часа</span>', 'st.ch1': 'Без банка', 'st.ch2': '0% процентов', 'st.ch3': 'Без штрафов', 'st.ch4': '12 областей',
+    'models.eb': 'Модели', 'models.title': 'Три модели. <span class="grad-text">Одно условие: без банка и 0%.</span>',
+    'models.lead': 'Ежемесячные платежи — условия рассрочки, объявленные Sergeli Avto, с бонусами. Больше первый взнос — меньше платёж.',
+    'models.damas.meta': 'Новый · 7 мест', 'models.damas.price': 'в месяц · первый взнос 60% · 30 мес. (от 30% — 2 261 000)', 'models.calc': 'Рассчитать',
+    'models.cs.meta': 'Новый · MCM · белый', 'models.cs.price': 'в месяц · первый взнос 50% (82 500 000) · 24 мес.',
+    'models.cm.meta': 'Новый · MCM · чёрный', 'models.cm.price': 'в месяц · первый взнос 50% (87 000 000) · 24 мес.',
+    'models.labo.meta': 'Новый · для груза', 'models.labo.price': 'Узнать цену', 'models.labo.text': 'условия по запросу: без банка, 0%, без штрафов', 'models.ask': 'Узнать цену',
+    'alt.cobaltStyle': 'Chevrolet Cobalt Style MCM, белый', 'alt.cobaltMidnight': 'Chevrolet Cobalt Midnight MCM, чёрный',
+    'cx.eb': 'Калькулятор', 'cx.title': 'Рассчитайте <span class="grad-text">ежемесячный платёж</span>', 'cx.lead': 'Цифры — условия, объявленные Sergeli Avto: без банка, без процентов, бонусы включены в цену.',
+    'cx.step1': 'Модель', 'cx.step2': 'Первый взнос', 'cx.laboSmall': 'цена по запросу', 'cx.fifty': 'Damas · Cobalt', 'cx.hint': 'Damas — первый взнос 30/40/50/60%, 30 месяцев. Cobalt Style и Midnight — 50%, 24 месяца. Бонусы включены в цену.',
+    'cx.monthly': 'Платёж в месяц', 'cx.total': 'Итого', 'cx.term': 'Срок', 'cx.totalCalc': 'Итого (расчёт)', 'cx.bonuses': 'Бонусы', 'cx.apply': 'Заявка на этих условиях',
+    'cx.disc': '«Итого» — первый взнос + платёж × число месяцев, рассчитано на сайте. Банка, процентов и штрафов нет. Точные условия — при оформлении в салоне.',
+    'cx.askText': 'Условия по Labo — по запросу: без банка, 0%, без штрафов, один паспорт. Позвоните или оставьте заявку — назовём цену.', 'cx.perMonth': 'В месяц', 'cx.barBtn': 'Заявка',
+    'bonus.eb': 'Бонусы', 'bonus.title': 'К каждому авто — <span class="grad-text">бонусы в подарок</span>', 'bonus.lead': 'Бонусы включены в цену и выдаются вместе с ключами.',
+    'b.reg': 'Видеорегистратор', 'b.polik': 'Коврики', 'b.benzin': 'Бензин', 'b.bar': 'Бар', 'b.torpedo': 'Чехол на торпедо', 'b.podnomer': 'Рамки под номер', 'b.pult': 'Чехол на пульт', 'b.brizgovik': 'Брызговики', 'b.setka': 'Сетка', 'b.moyka': 'Мойка', 'b.kraska': 'Проверка краски прибором',
+    'steps.eb': 'Как это работает', 'steps.title': 'Три шага — <span class="grad-text">и ключи у вас</span>',
+    'steps.1': 'Звонок или заявка', 'steps.1t': 'Выбираете модель и первый взнос. Подтверждаем условия по телефону или в Instagram DM.',
+    'steps.2': 'Паспорт и первый взнос', 'steps.2t': 'Приезжаете в салон с одним паспортом. Банк, поручитель, справки и залог не нужны.',
+    'steps.3': 'Ключи за 2–3 часа', 'steps.3t': 'Оформление быстрое — ключи в тот же день. Доставляем в 12 областей.',
+    'gal.eb': 'Салон', 'gal.title': 'Сергели, Index — <span class="grad-text">выдача каждый день</span>', 'gal.lead': 'Настоящие фото: салон, сотрудники и новые Cobalt.',
+    'gal.1': 'Салон Sergeli Avto днём', 'gal.2': 'Сотрудники и новые Cobalt', 'gal.3': 'Вывеска ночью',
+    'faq.eb': 'Вопросы', 'faq.title': 'Частые <span class="grad-text">вопросы</span>', 'faq.lead': 'Коротко и по делу. Остальное спросите по телефону или в Instagram DM.',
+    'faq.q1': 'Нужен ли банк?', 'faq.a1': 'Нет. Рассрочка оформляется через Sergeli Avto, без банка и поручителя.',
+    'faq.q2': 'Есть ли проценты?', 'faq.a2': 'Нет — 0%. Итого = первый взнос + платёж × число месяцев. Пени и штрафов нет.',
+    'faq.q3': 'Какие документы нужны?', 'faq.a3': 'Один паспорт. Справка о доходах, поручитель или залог не требуются.',
+    'faq.q4': 'Сколько это занимает?', 'faq.a4': '2–3 часа — от оформления до ключей.',
+    'faq.q5': 'Доставляете в области?', 'faq.a5': 'Да, в 12 областей — по одному паспорту. Детали уточним по телефону.',
+    'faq.q6': 'Какие модели есть?', 'faq.a6': 'Новые Chevrolet Damas, Cobalt (Style и Midnight MCM) и Labo. Цена Labo — по запросу.',
+    'faq.q7': 'Какие бонусы?', 'faq.a7': 'Cobalt: видеорегистратор, коврики, бензин, бар, чехол на торпедо, рамки под номер, чехол на пульт, брызговики, сетка, мойка, проверка краски прибором. Damas: видеорегистратор, коврики, рамки под номер, мойка, проверка краски прибором.',
+    'faq.q8': 'Где вы и когда работаете?', 'faq.a8': 'г. Ташкент, Сергелийский район, Index. Ежедневно 09:00–19:00. Instagram: @sergeli_auto.',
+    'rq.eb': 'Отвечаем ежедневно 09:00–19:00', 'rq.title': 'Оставьте <span class="grad-text">заявку</span>', 'rq.lead': 'Два коротких шага. Второй можно пропустить — остальное обсудим по телефону.',
+    'rq.n1': 'Звонок или DM', 'rq.n1s': 'Подтверждаем модель и первый взнос', 'rq.n2': 'В салон с паспортом', 'rq.n2s': 'Сергелийский район, Index', 'rq.n3': 'Ключи за 2–3 часа', 'rq.n3s': 'Или доставим в 12 областей',
+    'rq.st1': 'Контакт', 'rq.st2': 'Авто', 'rq.st3': 'Готово', 'rq.meter': 'Заявка заполнена', 'rq.l1': 'Как с вами связаться', 'rq.name': 'Ваше имя', 'rq.phone': 'Телефон', 'rq.next': 'Далее', 'rq.hint': 'Второй шаг можно пропустить',
+    'rq.l2': 'Какое авто и условия', 'rq.opt': 'необязательно', 'rq.model': 'Модель', 'rq.note': 'Комментарий (область, цвет, вопрос)', 'rq.back': 'Назад', 'rq.skip': 'Пропустить', 'rq.send': 'Отправить заявку',
+    'rq.doneT': 'Заявка готова', 'rq.doneX': 'Текст сообщения скопирован — вставьте его в Instagram DM или позвоните прямо сейчас. Ежедневно 09:00–19:00.', 'rq.copied': 'Сообщение скопировано', 'rq.copy': 'Скопировать', 'rq.again': 'Новая заявка',
+    'ct.eb': 'Контакты', 'ct.title': 'Сергели, Index. <span class="grad-text">Ежедневно 09:00–19:00.</span>', 'ct.lead': 'Позвоните или напишите в Instagram — сразу назовём модель и условия.',
+    'ct.phone': 'Телефон', 'ct.followers': 'подписчиков', 'ct.addr': 'Адрес', 'ct.hours': 'Режим работы',
+    'ft.kicker': 'Instagram · 111K подписчиков', 'ft.title': 'Новые поступления — каждый день в @sergeli_auto', 'ft.text': 'Цены, условия и фото выдачи. На вопросы отвечаем в DM.', 'ft.rec': 'подписчиков · @sergeli_auto', 'ft.open': 'Открыть Instagram',
+    'ft.desc': 'Новые Chevrolet Damas, Cobalt и Labo — в рассрочку без банка, без процентов, без штрафов и пени. В 12 областей по одному паспорту. Ташкент, Сергелийский район.',
+    'ft.soc': 'Каналы связи Sergeli Avto', 'ft.sections': 'Разделы', 'ft.prefs': 'Настройки', 'ft.copy': 'Продажа автомобилей Chevrolet в рассрочку', 'ft.site': 'Сайт:'
+  };
+  var OPEN = { uz: ['Hozir ochiq', 'Hozir yopiq'], ru: ['Сейчас открыто', 'Сейчас закрыто'] };
+  var lang = (document.documentElement.getAttribute('lang') || 'uz').slice(0, 2);
+  var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
 
-    "hero.nol": "0 foiz",
-    "hero.h1a": "Yangi Chevrolet.", "hero.h1b": "0% rassrochka.", "hero.h1c": "Bank yo'q.",
-    "hero.from": "Damas — oyiga", "hero.fromNote": "dan · 60% bosh to'lov · 30 oy · 1 pasport",
-    "hero.call": "Qo'ng'iroq qilish", "hero.calc": "Oylik to'lovni hisoblash",
-    "hero.photoAlt": "Sergeli Avto saloni kunduzi: topshiruv paytida yangi oq Cobalt va xodimlar",
-    "hero.photoCap": "Sergeli Avto saloni, Index. Har kuni topshiruv.",
-
-    "trust.1": "Banksiz", "trust.2": "Foizsiz — 0%", "trust.3": "Penya va jarimalarsiz", "trust.4": "1 ta pasport evaziga", "trust.5": "12 viloyatga yetkazib beramiz", "trust.6": "2–3 soat ichida", "trust.7": "Tez va arzon narxlarda",
-
-    "models.title": "Uch model. Bitta shart: banksiz va 0%.",
-    "models.sub": "Oylik to'lovlar — Sergeli Avto e'lon qilgan rassrochka shartlari. Bosh to'lovni oshirsangiz, oylik kamayadi.",
-    "models.down": "Bosh to'lov", "models.term": "Muddat", "models.bonus": "ta bonus",
-    "models.damas.note": "yangi, 7 o'rin",
-    "models.cobalt.note": "yangi, MCM",
-    "models.labo.note": "yangi, yuk uchun",
-    "models.labo.price": "Narxini so'rang",
-    "models.labo.text": "Labo bo'yicha shartlar so'rov bo'yicha: banksiz, 0%, jarimalarsiz, bonuslar bilan.",
-    "models.calc": "Hisoblash", "models.ask": "Narxini so'rash",
-    "trim.style": "Style · oq", "trim.midnight": "Midnight · qora", "trim.label": "Komplektatsiya",
-    "alt.cobaltStyle": "Chevrolet Cobalt Style MCM, oq", "alt.cobaltMidnight": "Chevrolet Cobalt Midnight MCM, qora",
-    "m.damas": "Chevrolet Damas", "m.cobaltStyle": "Chevrolet Cobalt Style MCM", "m.cobaltMidnight": "Chevrolet Cobalt Midnight MCM", "m.labo": "Chevrolet Labo",
-    "m.short.damas": "Damas", "m.short.cobaltStyle": "Cobalt Style", "m.short.cobaltMidnight": "Cobalt Midnight", "m.short.labo": "Labo",
-
-    "calc.title": "Oylik to'lovni hisoblang",
-    "calc.sub": "Modelni va bosh to'lovni tanlang — oylik to'lov, muddat va jami summa shu yerda.",
-    "calc.model": "Model", "calc.down": "Bosh to'lov",
-    "calc.onlyCobalt": "Cobalt MCM uchun bosh to'lov — 50%.",
-    "calc.r.monthly": "Oylik to'lov", "calc.r.down": "Bosh to'lov", "calc.r.term": "Muddat", "calc.r.total": "Jami", "calc.r.totalNote": "bosh to'lov + oylik × muddat",
-    "calc.r.rate": "Foiz", "calc.r.bonus": "Bonus",
-    "calc.cta": "Shu shart bilan ariza",
-    "calc.fine": "Hisob Sergeli Avto e'lon qilgan shartlar asosida. Aniq shartlar shartnomada belgilanadi.",
-    "calc.labo.title": "Labo — narxini so'rang",
-    "calc.labo.text": "Labo bo'yicha shartlar so'rov bo'yicha beriladi: banksiz, 0%, jarimalarsiz, bonuslar bilan. Qo'ng'iroq qiling yoki ariza qoldiring.",
-    "calc.live": "{model}: bosh to'lov {pct} — {down} so'm, {term} oy, oylik {monthly} so'm, jami {total} so'm.",
-
-    "why.title": "Nega Sergeli Avto",
-    "why.1.t": "Banksiz, foizsiz, jarimalarsiz", "why.1.d": "Shartnoma to'g'ridan-to'g'ri salon bilan. 0% — ustama yo'q, penya yo'q.",
-    "why.2.t": "1 ta pasport", "why.2.d": "Boshqa hujjat, ma'lumotnoma yoki kafil talab qilinmaydi.",
-    "why.3.t": "12 viloyat", "why.3.d": "Toshkentda yoki 12 viloyatning istalganiga yetkazib beramiz.",
-    "why.4.t": "Kalit 2–3 soatda", "why.4.d": "Ertalab murojaat — kunduzi avtomobil qo'lingizda. Tez va arzon narxlarda.",
-    "why.ig.n": "obunachi", "why.ig.text": "@sergeli_auto — har kuni yangi topshiruvlar", "why.ig.cta": "Instagram'da ko'rish",
-    "alt.staff": "Salon xodimi oq va qora Cobalt orasida, tungi maydoncha",
-    "alt.sign": "SERGELI AUTO yozuvi va telefon raqami, tungi chiroq",
-    "alt.night": "Sergeli Avto salonining tungi fasadi, oldida oq va qora Cobalt",
-
-    "how.title": "Qanday ishlaydi",
-    "how.1.t": "Tanlaysiz", "how.1.d": "Model va bosh to'lov foizi — kalkulyatorda yoki telefon orqali.",
-    "how.2.t": "Pasport bilan kelasiz", "how.2.d": "Bitta pasport, bosh to'lov — shartnoma salon bilan, bank yo'q.",
-    "how.3.t": "2–3 soatda kalit", "how.3.d": "Avtomobil tayyor: bonuslar o'rnatilgan. Toshkent yoki 12 viloyat.",
-
-    "bonus.title": "Kalit bilan birga — bonuslar",
-    "bonus.sub": "Avtomobil tayyor holda topshiriladi: bo'yoq apparatda tekshirilgan, moyka qilingan, aksessuarlar o'rnatilgan.",
-    "bonus.n": "ta bonus", "bonus.labo": "Labo ham bonuslar bilan topshiriladi — ro'yxatni so'rang.",
-    "b.dvr": "Videoregistrator", "b.mats": "Poliklar", "b.fuel": "Benzin", "b.bar": "Bar", "b.dash": "Torpedo chexoli", "b.plate": "Podnomer", "b.key": "Pult chexoli", "b.mud": "Brizgoviklar", "b.net": "Setka", "b.wash": "Moyka", "b.paint": "Bo'yoq apparatda tekshiruv",
-
-    "faq.title": "Savol-javob",
-    "faq.1.q": "Qanday hujjat kerak?", "faq.1.a": "Faqat 1 ta pasport. Ma'lumotnoma, kafil yoki boshqa hujjat talab qilinmaydi.",
-    "faq.2.q": "Foiz bormi?", "faq.2.a": "Yo'q — 0%. Bank ishtirok etmaydi, shartnoma to'g'ridan-to'g'ri Sergeli Avto bilan tuziladi.",
-    "faq.3.q": "Kechiksam jarima bo'ladimi?", "faq.3.a": "Penya va jarimalar yo'q — bu rassrochka shartlarining bir qismi.",
-    "faq.4.q": "Viloyatdan olsam bo'ladimi?", "faq.4.a": "Ha. 12 viloyatga 1 ta pasport evaziga yetkazib beramiz.",
-    "faq.5.q": "Qancha vaqt ketadi?", "faq.5.a": "2–3 soat ichida. Avtomobil salonda tayyor holda, bonuslar bilan topshiriladi.",
-
-    "lead.title": "Ariza qoldiring — qo'ng'iroq qilamiz",
-    "lead.sub": "Ish vaqtida bog'lanamiz, shartlarni tushuntiramiz va kelish vaqtini kelishamiz.",
-    "lead.name": "Ismingiz", "lead.name.ph": "Masalan, Bunyod", "lead.err.name": "Ismingizni kiriting (kamida 2 ta harf).",
-    "lead.phone": "Telefon", "lead.err.phone": "Telefon raqamini +998 bilan to'liq kiriting.",
-    "lead.model": "Model", "lead.down": "Bosh to'lov",
-    "lead.summary": "{model} · {pct} bosh to'lov · oyiga {monthly} so'm · {term} oy",
-    "lead.summary.labo": "Chevrolet Labo · narx so'rov bo'yicha",
-    "lead.submit": "Ariza yuborish",
-    "lead.fine": "Ma'lumotlar faqat Sergeli Avto bilan bog'lanish uchun ishlatiladi.",
-    "lead.ok.title": "Rahmat! Arizangiz tayyor",
-    "lead.ok.text": "Xabar matni nusxalandi. Tezroq javob olish uchun hozir qo'ng'iroq qiling yoki Instagram'da yozing — matnni shunchaki joylashtiring.",
-    "lead.ok.text.nocopy": "Tezroq javob olish uchun hozir qo'ng'iroq qiling yoki quyidagi matnni Instagram'ga nusxalab yuboring.",
-    "lead.ok.call": "Qo'ng'iroq qilish", "lead.ok.ig": "Instagram'da yozish", "lead.again": "Yana bir ariza",
-    "lead.msg": "Assalomu alaykum, Sergeli Avto!\nMen {name}. Iltimos, menga qo'ng'iroq qiling.\nModel: {model}\n{terms}\nTelefon: {phone}",
-    "lead.msg.terms": "Bosh to'lov: {pct} ({down} so'm), oylik {monthly} so'm, {term} oy.",
-    "lead.msg.termsLabo": "Narxini va shartlarini bilmoqchiman.",
-
-    "contact.phone": "Telefon", "contact.hours": "Ish vaqti", "contact.addr": "Manzil", "contact.map": "Xaritada ochish", "contact.ig": "Instagram",
-
-    "footer.bio": "Avtomobil sotish va sotib olish xizmati · Toshkent, Sergeli tumani (Index) · Har kuni 09:00–19:00",
-    "footer.site": "Sayt:",
-    "bar.call": "Qo'ng'iroq", "bar.calc": "Kalkulyator"
-  },
-
-  ru: {
-    "meta.title": "Sergeli Avto — новый Chevrolet в рассрочку 0% без банка | Ташкент, Сергели",
-    "meta.desc": "Sergeli Avto — продажа и покупка автомобилей в Ташкенте. Damas, Cobalt, Labo в рассрочку без банка, без процентов и штрафов. По одному паспорту, доставка в 12 областей. Ключи за 2–3 часа.",
-    "skip": "Перейти к содержимому",
-    "nav.models": "Модели", "nav.calc": "Калькулятор", "nav.why": "Почему мы", "nav.faq": "Вопросы", "nav.contact": "Контакты",
-    "nav.label": "Разделы",
-    "hours": "Ежедневно 09:00–19:00",
-    "open.now": "Сейчас открыто", "open.closed": "Сейчас закрыто · откроемся в 09:00",
-    "addr": "г. Ташкент, Сергелийский район, Index",
-    "sum": "сум", "perMonth": "сум в месяц", "months": "мес.",
-
-    "hero.nol": "0 процентов",
-    "hero.h1a": "Новый Chevrolet.", "hero.h1b": "Рассрочка 0%.", "hero.h1c": "Без банка.",
-    "hero.from": "Damas — в месяц от", "hero.fromNote": "взнос 60% · 30 месяцев · 1 паспорт",
-    "hero.call": "Позвонить", "hero.calc": "Рассчитать платёж",
-    "hero.photoAlt": "Салон Sergeli Avto днём: выдача нового белого Cobalt, сотрудники",
-    "hero.photoCap": "Салон Sergeli Avto, Index. Выдачи каждый день.",
-
-    "trust.1": "Без банка", "trust.2": "Без процентов — 0%", "trust.3": "Без пени и штрафов", "trust.4": "По одному паспорту", "trust.5": "Доставка в 12 областей", "trust.6": "За 2–3 часа", "trust.7": "Быстро и по доступным ценам",
-
-    "models.title": "Три модели. Одно условие: без банка и под 0%.",
-    "models.sub": "Платежи — условия рассрочки, объявленные Sergeli Avto. Чем больше первый взнос, тем меньше платёж.",
-    "models.down": "Первый взнос", "models.term": "Срок", "models.bonus": "бонусов",
-    "models.damas.note": "новый, 7 мест",
-    "models.cobalt.note": "новый, MCM",
-    "models.labo.note": "новый, грузовой",
-    "models.labo.price": "Уточняйте цену",
-    "models.labo.text": "Условия по Labo — по запросу: без банка, 0%, без штрафов, с бонусами.",
-    "models.calc": "Рассчитать", "models.ask": "Узнать цену",
-    "trim.style": "Style · белый", "trim.midnight": "Midnight · чёрный", "trim.label": "Комплектация",
-    "alt.cobaltStyle": "Chevrolet Cobalt Style MCM, белый", "alt.cobaltMidnight": "Chevrolet Cobalt Midnight MCM, чёрный",
-    "m.damas": "Chevrolet Damas", "m.cobaltStyle": "Chevrolet Cobalt Style MCM", "m.cobaltMidnight": "Chevrolet Cobalt Midnight MCM", "m.labo": "Chevrolet Labo",
-    "m.short.damas": "Damas", "m.short.cobaltStyle": "Cobalt Style", "m.short.cobaltMidnight": "Cobalt Midnight", "m.short.labo": "Labo",
-
-    "calc.title": "Рассчитайте платёж",
-    "calc.sub": "Выберите модель и первый взнос — платёж в месяц, срок и итоговая сумма здесь.",
-    "calc.model": "Модель", "calc.down": "Первый взнос",
-    "calc.onlyCobalt": "Для Cobalt MCM первый взнос — 50%.",
-    "calc.r.monthly": "Платёж в месяц", "calc.r.down": "Первый взнос", "calc.r.term": "Срок", "calc.r.total": "Итого", "calc.r.totalNote": "взнос + платёж × срок",
-    "calc.r.rate": "Процент", "calc.r.bonus": "Бонусы",
-    "calc.cta": "Заявка на этих условиях",
-    "calc.fine": "Расчёт по условиям, объявленным Sergeli Avto. Точные условия фиксируются в договоре.",
-    "calc.labo.title": "Labo — уточняйте цену",
-    "calc.labo.text": "Условия по Labo — по запросу: без банка, 0%, без штрафов, с бонусами. Позвоните или оставьте заявку.",
-    "calc.live": "{model}: первый взнос {pct} — {down} сум, {term} мес., платёж {monthly} сум, итого {total} сум.",
-
-    "why.title": "Почему Sergeli Avto",
-    "why.1.t": "Без банка, процентов и штрафов", "why.1.d": "Договор напрямую с салоном. 0% — без наценки и пени.",
-    "why.2.t": "Один паспорт", "why.2.d": "Другие документы, справки и поручители не нужны.",
-    "why.3.t": "12 областей", "why.3.d": "В Ташкенте или с доставкой в любую из 12 областей.",
-    "why.4.t": "Ключи за 2–3 часа", "why.4.d": "Утром обращение — днём автомобиль у вас. Быстро и по доступным ценам.",
-    "why.ig.n": "подписчиков", "why.ig.text": "@sergeli_auto — новые выдачи каждый день", "why.ig.cta": "Смотреть в Instagram",
-    "alt.staff": "Сотрудник салона между белым и чёрным Cobalt на ночной площадке",
-    "alt.sign": "Вывеска SERGELI AUTO с номером телефона, ночная подсветка",
-    "alt.night": "Ночной фасад салона Sergeli Avto, перед ним белый и чёрный Cobalt",
-
-    "how.title": "Как это работает",
-    "how.1.t": "Выбираете", "how.1.d": "Модель и процент первого взноса — в калькуляторе или по телефону.",
-    "how.2.t": "Приезжаете с паспортом", "how.2.d": "Один паспорт, первый взнос — договор с салоном, без банка.",
-    "how.3.t": "Ключи за 2–3 часа", "how.3.d": "Автомобиль готов: бонусы установлены. Ташкент или 12 областей.",
-
-    "bonus.title": "Вместе с ключами — бонусы",
-    "bonus.sub": "Автомобиль передаём готовым: краска проверена толщиномером, мойка сделана, аксессуары установлены.",
-    "bonus.n": "бонусов", "bonus.labo": "Labo тоже передаём с бонусами — уточните список.",
-    "b.dvr": "Видеорегистратор", "b.mats": "Коврики", "b.fuel": "Бензин", "b.bar": "Бар", "b.dash": "Чехол на торпедо", "b.plate": "Рамки номера", "b.key": "Чехол на ключ", "b.mud": "Брызговики", "b.net": "Сетка", "b.wash": "Мойка", "b.paint": "Проверка краски прибором",
-
-    "faq.title": "Вопросы и ответы",
-    "faq.1.q": "Какие документы нужны?", "faq.1.a": "Только один паспорт. Справки, поручители и другие документы не требуются.",
-    "faq.2.q": "Есть ли проценты?", "faq.2.a": "Нет — 0%. Банк не участвует, договор заключается напрямую с Sergeli Avto.",
-    "faq.3.q": "Будет ли штраф за просрочку?", "faq.3.a": "Пени и штрафов нет — это часть условий рассрочки.",
-    "faq.4.q": "Можно ли купить из области?", "faq.4.a": "Да. Доставляем в 12 областей по одному паспорту.",
-    "faq.5.q": "Сколько это занимает?", "faq.5.a": "2–3 часа. Автомобиль передаём готовым, с бонусами.",
-
-    "lead.title": "Оставьте заявку — перезвоним",
-    "lead.sub": "Свяжемся в рабочее время, объясним условия и согласуем время визита.",
-    "lead.name": "Ваше имя", "lead.name.ph": "Например, Бунёд", "lead.err.name": "Введите имя (минимум 2 буквы).",
-    "lead.phone": "Телефон", "lead.err.phone": "Введите полный номер, начиная с +998.",
-    "lead.model": "Модель", "lead.down": "Первый взнос",
-    "lead.summary": "{model} · взнос {pct} · {monthly} сум в месяц · {term} мес.",
-    "lead.summary.labo": "Chevrolet Labo · цена по запросу",
-    "lead.submit": "Отправить заявку",
-    "lead.fine": "Данные используются только для связи с Sergeli Avto.",
-    "lead.ok.title": "Спасибо! Заявка готова",
-    "lead.ok.text": "Текст сообщения скопирован. Чтобы ответили быстрее — позвоните сейчас или напишите в Instagram и просто вставьте текст.",
-    "lead.ok.text.nocopy": "Чтобы ответили быстрее — позвоните сейчас или скопируйте текст ниже и отправьте в Instagram.",
-    "lead.ok.call": "Позвонить", "lead.ok.ig": "Написать в Instagram", "lead.again": "Ещё одна заявка",
-    "lead.msg": "Здравствуйте, Sergeli Avto!\nМеня зовут {name}. Пожалуйста, перезвоните мне.\nМодель: {model}\n{terms}\nТелефон: {phone}",
-    "lead.msg.terms": "Первый взнос: {pct} ({down} сум), платёж {monthly} сум, {term} мес.",
-    "lead.msg.termsLabo": "Хочу узнать цену и условия.",
-
-    "contact.phone": "Телефон", "contact.hours": "Режим работы", "contact.addr": "Адрес", "contact.map": "Открыть на карте", "contact.ig": "Instagram",
-
-    "footer.bio": "Продажа и покупка автомобилей · Ташкент, Сергелийский район (Index) · Ежедневно 09:00–19:00",
-    "footer.site": "Сайт:",
-    "bar.call": "Позвонить", "bar.calc": "Калькулятор"
+  if (lang === 'ru') {
+    var get = function (k) { return Object.prototype.hasOwnProperty.call(RU, k) ? RU[k] : null; };
+    $$('[data-i18n]').forEach(function (el) { var v = get(el.getAttribute('data-i18n')); if (v !== null) el.textContent = v; });
+    $$('[data-i18n-html]').forEach(function (el) { var v = get(el.getAttribute('data-i18n-html')); if (v !== null) el.innerHTML = v; });
+    $$('[data-i18n-label]').forEach(function (el) { var v = get(el.getAttribute('data-i18n-label')); if (v !== null) el.setAttribute('aria-label', v); });
+    $$('[data-i18n-alt]').forEach(function (el) { var v = get(el.getAttribute('data-i18n-alt')); if (v !== null) el.setAttribute('alt', v); });
+    $$('[data-i18n-content]').forEach(function (el) { var v = get(el.getAttribute('data-i18n-content')); if (v !== null) el.setAttribute('content', v); });
+    document.title = RU['meta.title'];
   }
-};
+  $$('[data-lang-current]').forEach(function (el) { el.textContent = lang.toUpperCase(); });
+  $$('[data-lang-link]').forEach(function (a) { if (a.getAttribute('data-lang-link') === lang) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+  var o = document.querySelector('[data-open-now]');
+  if (o) { var t = OPEN[lang] || OPEN.uz; o.setAttribute('data-open-yes', t[0]); o.setAttribute('data-open-no', t[1]); }
+  /* marquee: the second (hidden) track is a copy of the first, so the loop is seamless */
+  ['1', '2'].forEach(function (n) {
+    var tracks = $$('[data-i18n-track="' + n + '"]');
+    if (tracks.length === 2) tracks[1].innerHTML = tracks[0].innerHTML;
+  });
+  window.SA_LANG = lang;
+})();
