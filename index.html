@@ -16,7 +16,7 @@
   <script>(function(d,w){var h=d.documentElement,t=null,l=null,b=null,q=location.search;h.classList.add("js");try{t=localStorage.getItem("sa-theme");l=localStorage.getItem("sa-lang")}catch(e){}if(t!=="light"&&t!=="dark"){t="dark"}h.setAttribute("data-theme",t);if(/[?&]lang=ru/.test(q))l="ru";else if(/[?&]lang=uz/.test(q))l="uz";if(l==="ru"||l==="uz")h.setAttribute("lang",l);var rm=w.matchMedia&&w.matchMedia("(prefers-reduced-motion: reduce)").matches;if(!rm){h.classList.add("motion");setTimeout(function(){if(!h.classList.contains("anim-ready"))h.classList.remove("motion")},4000)}try{b=sessionStorage.getItem("sa-boot")}catch(e){}if(/[?&]boot=1/.test(q)||(!b&&!/[?&]boot=0/.test(q)&&!/bot|crawl|spider|lighthouse|headless/i.test(navigator.userAgent))){h.classList.add("boot")}try{var m=d.querySelector("meta[data-theme-color]");if(m)m.content=t==="dark"?"#08090B":"#F2F3F5"}catch(e){}})(document,window);</script>
   <link rel="icon" href="assets/svg/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/fonts.css?v=6">
-  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoDealer","name":"Sergeli Avto","url":"https://sergeliauto.uz","telephone":["+998 77 708 99 70","+998 88 014 07 71"],"sameAs":["https://instagram.com/sergeli_auto"],"address":{"@type":"PostalAddress","addressLocality":"Toshkent","addressRegion":"Sergeli tumani","addressCountry":"UZ","streetAddress":"Index"},"openingHours":"Mo-Su 09:00-19:00","brand":"Chevrolet"}</script>
 </head>
 <body class="is-home">
@@ -371,35 +371,54 @@
       </div>
       <p class="lead" data-i18n="bonus.lead">Bonuslar narxga kiritilgan va kalit bilan birga topshiriladi.</p>
     </div>
-    <div class="two-lists">
-      <div>
-        <h3><span class="app-icon sm ic-4" aria-hidden="true"><svg><use href="#i-car"/></svg></span>Cobalt<small>10+ <span data-i18n="bonusN">bonus</span></small></h3>
-        <ul class="check-list is-2">
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.reg">Videoregistrator</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.polik">Polik</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.benzin">Benzin</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.bar">Bar</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.torpedo">Torpedo chexoli</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.podnomer">Podnomer</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.pult">Pult chexoli</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.brizgovik">Brizgovik</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.setka">Setka</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.moyka">Moyka</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.kraska">Kraskani aparatda tekshirish</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3><span class="app-icon sm ic-1" aria-hidden="true"><svg><use href="#i-truck"/></svg></span>Damas<small>5 <span data-i18n="bonusN">bonus</span></small></h3>
-        <ul class="check-list">
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.reg">Videoregistrator</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.polik">Polik</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.podnomer">Podnomer</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.moyka">Moyka</span></li>
-          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="b.kraska">Kraskani aparatda tekshirish</span></li>
-        </ul>
-      </div>
+    <ul class="bn-grid">
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="reg" aria-hidden="true"><span class="bn-num">01</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.reg">Videoregistrator</b><span class="bn-tags"><i>Cobalt</i><i>Damas</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="polik" aria-hidden="true"><span class="bn-num">02</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.polik">Polik</b><span class="bn-tags"><i>Cobalt</i><i>Damas</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="podnomer" aria-hidden="true"><span class="bn-num">03</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.podnomer">Podnomer</b><span class="bn-tags"><i>Cobalt</i><i>Damas</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="moyka" aria-hidden="true"><span class="bn-num">04</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.moyka">Moyka</b><span class="bn-tags"><i>Cobalt</i><i>Damas</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="kraska" aria-hidden="true"><span class="bn-num">05</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.kraska">Kraskani aparatda tekshirish</b><span class="bn-tags"><i>Cobalt</i><i>Damas</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="benzin" aria-hidden="true"><span class="bn-num">06</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.benzin">Benzin</b><span class="bn-tags"><i>Cobalt</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="bar" aria-hidden="true"><span class="bn-num">07</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.bar">Bar</b><span class="bn-tags"><i>Cobalt</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="torpedo" aria-hidden="true"><span class="bn-num">08</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.torpedo">Torpedo chexoli</b><span class="bn-tags"><i>Cobalt</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="pult" aria-hidden="true"><span class="bn-num">09</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.pult">Pult chexoli</b><span class="bn-tags"><i>Cobalt</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="brizgovik" aria-hidden="true"><span class="bn-num">10</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.brizgovik">Brizgovik</b><span class="bn-tags"><i>Cobalt</i></span></div>
+        </li>
+        <li class="bn-card" data-reveal>
+          <figure class="bn-ph" data-bonus="setka" aria-hidden="true"><span class="bn-num">11</span><svg class="bn-ic"><use href="#i-gift"/></svg></figure>
+          <div class="bn-body"><b data-i18n="b.setka">Setka</b><span class="bn-tags"><i>Cobalt</i></span></div>
+        </li>
+      </ul>
+      <p class="bn-note"><span data-i18n="bonus.note">Cobalt — 10+ bonus, Damas — 5 bonus.</span></p>
     </div>
-  </div>
 </section>
 
 <section class="section section-tight" id="steps" aria-labelledby="steps-title">
