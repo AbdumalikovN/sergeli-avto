@@ -906,3 +906,29 @@ html.theme-vt::view-transition-new(root) { animation: theme-reveal 0.75s var(--e
   .soc-ic:not(.soc-phone) .soc-t { font-size: 14px; }
   .soc-ic:not(.soc-phone) svg { width: 22px; height: 22px; }
 }
+
+/* bonuses as photo cards (photos: assets/img/bonus/<key>.jpg, set via .bn-ph img) */
+.bn-grid { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.bn-card { border-radius: var(--r-lg); overflow: hidden; background-color: var(--card-fill); -webkit-backdrop-filter: blur(var(--card-blur)) saturate(180%); backdrop-filter: blur(var(--card-blur)) saturate(180%); box-shadow: var(--card-shadow), var(--card-rims); transition: transform var(--t-mid) var(--spring); }
+@media (hover: hover) { .bn-card:hover { transform: translateY(-4px); } }
+.bn-ph { position: relative; margin: 0; aspect-ratio: 4 / 3; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(120% 90% at 20% 0%, rgba(var(--brand-rgb), 0.28), rgba(var(--brand-rgb), 0) 60%), linear-gradient(160deg, var(--fill), var(--fill-2)); }
+.bn-ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.bn-ic { width: 40px; height: 40px; color: rgb(var(--brand-rgb)); opacity: 0.85; }
+.bn-num { position: absolute; left: 14px; top: 10px; font-weight: 800; font-size: 13px; letter-spacing: 0.04em; color: var(--label-3); z-index: 1; }
+.bn-ph img ~ .bn-ic { display: none; }
+.bn-ph img ~ .bn-num, .bn-ph:has(img) .bn-num { color: #fff; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5); }
+.bn-body { padding: 14px 16px 16px; display: grid; gap: 8px; }
+.bn-body b { font-size: 16px; line-height: 1.25; }
+.bn-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.bn-tags i { font-style: normal; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: var(--r-pill); background: var(--fill); color: var(--label-2); }
+.bn-tags i + i { background: rgba(var(--brand-rgb), 0.14); color: rgb(var(--brand-rgb)); }
+.bn-note { margin-top: 16px; font-size: 14px; color: var(--label-3); }
+@media (max-width: 980px) { .bn-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .bn-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .bn-body { padding: 10px 12px 12px; } .bn-body b { font-size: 14px; } .bn-ic { width: 32px; height: 32px; } }
+
+/* form stepper on phones: numbers only, no clipped labels */
+@media (max-width: 560px) { .rq-steps li { font-size: 0; gap: 0; } .rq-steps span { font-size: 12.5px; } }
+/* stepper: only the first span is the round badge, the second is the plain label */
+.rq-steps li > span + span { width: auto; height: auto; border-radius: 0; display: inline; background: none !important; box-shadow: none !important; transform: none !important; font-size: inherit; font-weight: inherit; color: inherit; }
+@media (max-width: 560px) { .rq-steps li > span + span { display: none; } .rq-steps li.is-cur > span + span { display: inline; font-size: 13px; margin-left: 6px; } }
